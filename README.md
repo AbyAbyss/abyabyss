@@ -11,7 +11,9 @@
 
 # Hi, I'm Aby Saji Pappachan 👋
 
-### Technical Lead @ Josys · Backend &amp; AI Engineer
+### Technical Lead · Backend &amp; AI Engineer
+
+[![Open to Work](https://img.shields.io/badge/🟢_OPEN_TO_WORK-2ED3A7?style=for-the-badge&labelColor=111A21)](mailto:abyrocksaji@gmail.com)
 
 [![Typing SVG](https://readme-typing-svg.demolab.com/?font=Inter&weight=600&size=22&duration=3200&pause=800&color=2ED3A7&center=true&vCenter=true&width=640&lines=Building+scalable+backend+systems;Designing+AI+agents+%26+LLM+platforms;MCP+%7C+Generative+AI+%7C+Distributed+Systems;7%2B+years+across+Node.js+%7C+Python+%7C+Golang)](https://abyabyss.github.io)
 
@@ -19,7 +21,7 @@
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-abyabyss.github.io-2ED3A7?style=for-the-badge&logo=firefoxbrowser&logoColor=08140F)](https://abyabyss.github.io)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-aby--saji-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aby-saji)
-[![Email](https://img.shields.io/badge/Email-abyrocksaji-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:abyrocksaji@gmail.com)
+[![Email](https://img.shields.io/badge/Email-abysaji-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:abyrocksaji@gmail.com)
 [![Profile views](https://komarev.com/ghpvc/?username=AbyAbyss&label=Profile%20views&color=2ED3A7&style=for-the-badge)](https://github.com/AbyAbyss)
 
 </div>
