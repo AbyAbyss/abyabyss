@@ -33,6 +33,20 @@ high-performance backend systems and AI-powered products.
 
 ---
 
+## 🏅 GitHub Achievements
+
+<div align="center">
+
+![Pull Shark](https://img.shields.io/badge/Pull_Shark-×4-1F6FEB?style=for-the-badge&logo=github&logoColor=white&labelColor=111A21)
+![Pair Extraordinaire](https://img.shields.io/badge/Pair_Extraordinaire-×4-2ED3A7?style=for-the-badge&logo=github&logoColor=white&labelColor=111A21)
+![Quickdraw](https://img.shields.io/badge/Quickdraw-Unlocked-F0A500?style=for-the-badge&logo=github&logoColor=white&labelColor=111A21)
+![YOLO](https://img.shields.io/badge/YOLO-Unlocked-9D6BFF?style=for-the-badge&logo=github&logoColor=white&labelColor=111A21)
+![Arctic Code Vault](https://img.shields.io/badge/Arctic_Code_Vault-Contributor-7FB7C9?style=for-the-badge&logo=github&logoColor=white&labelColor=111A21)
+
+</div>
+
+---
+
 ## 🛠️ Tech Stack
 
 **Backend &amp; APIs**
