@@ -15,7 +15,7 @@
 
 [![Typing SVG](https://readme-typing-svg.demolab.com/?font=Inter&weight=600&size=22&duration=3200&pause=800&color=2ED3A7&center=true&vCenter=true&width=640&lines=Building+scalable+backend+systems;Designing+AI+agents+%26+LLM+platforms;MCP+%7C+Generative+AI+%7C+Distributed+Systems;7%2B+years+across+Node.js+%7C+Python+%7C+Golang)](https://abyabyss.github.io)
 
-📍 Birmingham, United Kingdom &nbsp; · &nbsp; 🟢 Open to Backend / AI / Platform roles &nbsp; · &nbsp; ✅ Legally eligible to work in the UK
+📍 Birmingham, United Kingdom &nbsp; · &nbsp; 🟢 Open to Backend / AI / Platform roles
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-abyabyss.github.io-2ED3A7?style=for-the-badge&logo=firefoxbrowser&logoColor=08140F)](https://abyabyss.github.io)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-aby--saji-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aby-saji)
@@ -89,12 +89,16 @@ high-performance backend systems and AI-powered products.
 
 <div align="center">
 
-![Aby's GitHub stats](https://github-readme-stats.vercel.app/api?username=AbyAbyss&show_icons=true&include_all_commits=true&hide_border=true&bg_color=111A21&title_color=2ED3A7&icon_color=2ED3A7&text_color=A7B5BF)
-![Top languages](https://github-readme-stats.vercel.app/api/top-langs/?username=AbyAbyss&layout=compact&hide_border=true&langs_count=8&bg_color=111A21&title_color=2ED3A7&text_color=A7B5BF)
+<img height="170" alt="Aby's GitHub stats" src="https://github-readme-stats.shion.dev/api?username=abyabyss&theme=dark&hide_border=false&include_all_commits=false&count_private=false" />
+<img height="170" alt="Top languages" src="https://github-readme-stats.shion.dev/api/top-langs/?username=abyabyss&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact" />
 
-![GitHub streak](https://github-readme-streak-stats.herokuapp.com/?user=AbyAbyss&hide_border=true&background=111A21&stroke=27353F&ring=2ED3A7&fire=2ED3A7&currStreakLabel=2ED3A7&sideLabels=A7B5BF&dates=7E8E99&currStreakNum=F1F5F7&sideNums=F1F5F7)
+<br />
 
-![Trophies](https://github-profile-trophy.vercel.app/?username=AbyAbyss&theme=darkhub&no-frame=true&no-bg=true&margin-w=4&column=7)
+<img alt="GitHub streak" src="https://streak-stats.demolab.com/?user=abyabyss&theme=dark&hide_border=false" />
+
+<br />
+
+<img alt="GitHub trophies" src="https://github-profile-trophy.vercel.app/?username=AbyAbyss&theme=darkhub&no-frame=true&no-bg=true&margin-w=4&column=7" />
 
 </div>
 
