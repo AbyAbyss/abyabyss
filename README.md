@@ -73,15 +73,66 @@ high-performance backend systems and AI-powered products.
 
 ## 🌟 Featured Projects
 
-| Project | What it is | Built with |
-| :------ | :--------- | :--------- |
-| **[InkTerm](https://github.com/AbyAbyss/InkTerm)** | A modern, themeable terminal with a built-in **AI agent** and **MCP** support | `TypeScript` · `AI` · `MCP` |
-| **[dockman](https://github.com/AbyAbyss/dockman)** | A fast Docker management desktop app — containers, images, volumes & builds | `Tauri` · `TypeScript` · `Rust` |
-| **[sandkit](https://github.com/AbyAbyss/sandkit)** | An SDK for embedding multi-language, runnable code playgrounds | `Hono` · `Turborepo` · `Pyodide` |
-| **[redis_gui](https://github.com/AbyAbyss/redis_gui)** | A graphical Redis client — keyspace, CLI, workbench & live metrics | `TypeScript` · `Webview` |
-| **[Yankit](https://github.com/AbyAbyss/Yankit)** | A native macOS clipboard companion | `Swift` · `SwiftUI` |
-
-> 🔭 Explore all of these as an interactive **3D star system** → **[abyabyss.github.io](https://abyabyss.github.io)**
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>📋&nbsp; <a href="https://github.com/AbyAbyss/Yankit">Yankit</a></h3>
+      <p>A native macOS clipboard companion for yanking, stashing and recalling snippets — fast and keyboard-driven.</p>
+      <p>
+        <img src="https://img.shields.io/badge/Swift-F05138?style=flat-square&logo=swift&logoColor=white" alt="Swift" />
+        <img src="https://img.shields.io/badge/SwiftUI-0071E3?style=flat-square&logo=swift&logoColor=white" alt="SwiftUI" />
+        <img src="https://img.shields.io/badge/macOS-111A21?style=flat-square&logo=apple&logoColor=white" alt="macOS" />
+      </p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>🐳&nbsp; <a href="https://github.com/AbyAbyss/dockman">dockman</a></h3>
+      <p>A fast Docker management desktop app — manage containers, images, volumes, networks and builds from one native window.</p>
+      <p>
+        <img src="https://img.shields.io/badge/Tauri-24C8D8?style=flat-square&logo=tauri&logoColor=white" alt="Tauri" />
+        <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+        <img src="https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🧩&nbsp; <a href="https://github.com/AbyAbyss/sandkit">sandkit</a></h3>
+      <p>An open-source SDK for embedding multi-language, runnable code playgrounds — powered by Piston, Pyodide and QuickJS.</p>
+      <p>
+        <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+        <img src="https://img.shields.io/badge/Hono-E36002?style=flat-square&logo=hono&logoColor=white" alt="Hono" />
+        <img src="https://img.shields.io/badge/Turborepo-EF4444?style=flat-square&logo=turborepo&logoColor=white" alt="Turborepo" />
+      </p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>🗄️&nbsp; <a href="https://github.com/AbyAbyss/redis_gui">redis_gui</a></h3>
+      <p>A graphical Redis client — browse the keyspace, run commands in a CLI and workbench, and watch live memory and metrics.</p>
+      <p>
+        <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+        <img src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white" alt="Redis" />
+        <img src="https://img.shields.io/badge/Webview-2ED3A7?style=flat-square&labelColor=111A21" alt="Webview" />
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>⌨️&nbsp; <a href="https://github.com/AbyAbyss/InkTerm">InkTerm</a></h3>
+      <p>A modern, themeable terminal with a built-in <b>AI agent</b> and <b>MCP</b> (Model Context Protocol) support — LLM-powered help, right in the command line.</p>
+      <p>
+        <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+        <img src="https://img.shields.io/badge/AI%20Agent-2ED3A7?style=flat-square&labelColor=111A21" alt="AI Agent" />
+        <img src="https://img.shields.io/badge/MCP-6E56CF?style=flat-square" alt="MCP" />
+      </p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>🚀&nbsp; Explore in 3D</h3>
+      <p>See every project as an interactive 3D star system — fly a ship between the planets and dock to open each one.</p>
+      <p>
+        <a href="https://abyabyss.github.io/explore.html"><img src="https://img.shields.io/badge/Launch%20abyabyss.github.io-2ED3A7?style=flat-square&labelColor=111A21" alt="Launch portfolio" /></a>
+      </p>
+    </td>
+  </tr>
+</table>
 
 ---
 
