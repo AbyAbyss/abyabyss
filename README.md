@@ -1,12 +1,3 @@
-<!--
-  ┌─────────────────────────────────────────────────────────────┐
-  │  GitHub PROFILE README                                       │
-  │  Create a new PUBLIC repo named exactly:  AbyAbyss           │
-  │  Add this file to it as:  README.md                          │
-  │  GitHub then shows it at the top of github.com/AbyAbyss      │
-  └─────────────────────────────────────────────────────────────┘
--->
-
 <div align="center">
 
 # Hi, I'm Aby Saji Pappachan 👋
