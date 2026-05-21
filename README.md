@@ -118,6 +118,16 @@ high-performance backend systems and AI-powered products.
   </tr>
   <tr>
     <td width="50%" valign="top">
+      <h3>🌐&nbsp; <a href="https://github.com/AbyAbyss/RestClient">RestClient</a></h3>
+      <p>A fast, open-source desktop REST client with a cartoon UI — send HTTP requests, manage collections and environments, run Postman-style test scripts, inspect response timelines, and load-test APIs.</p>
+      <p>
+        <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+        <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React" />
+        <img src="https://img.shields.io/badge/Tauri-24C8D8?style=flat-square&logo=tauri&logoColor=white" alt="Tauri" />
+        <img src="https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />
+      </p>
+    </td>
+    <td width="50%" valign="top">
       <h3>⌨️&nbsp; <a href="https://github.com/AbyAbyss/InkTerm">InkTerm</a></h3>
       <p>A modern, themeable terminal with a built-in <b>AI agent</b> and <b>MCP</b> (Model Context Protocol) support — LLM-powered help, right in the command line.</p>
       <p>
@@ -126,7 +136,9 @@ high-performance backend systems and AI-powered products.
         <img src="https://img.shields.io/badge/MCP-6E56CF?style=flat-square" alt="MCP" />
       </p>
     </td>
-    <td width="50%" valign="top">
+  </tr>
+  <tr>
+    <td colspan="2" valign="top" align="center">
       <h3>🚀&nbsp; Explore in 3D</h3>
       <p>See every project as an interactive 3D star system — fly a ship between the planets and dock to open each one.</p>
       <p>
