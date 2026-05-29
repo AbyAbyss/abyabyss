@@ -21,7 +21,7 @@
 
 ## 🚀 About Me
 
-I'm a **Technical Lead** with **7+ years** of experience delivering scalable SaaS platforms,
+I'm a **Technical Lead** with **8 years** of experience delivering scalable SaaS platforms,
 high-performance backend systems and AI-powered products.
 
 - 🧠 I design **LLM agents** and **MCP (Model Context Protocol)** client/server platforms, and bring **generative AI** into production
