@@ -82,6 +82,24 @@ high-performance backend systems and AI-powered products.
 
 <table>
   <tr>
+    <td colspan="2" valign="top">
+      <h3>🤖&nbsp; <a href="https://abyabyss.github.io/agentkit/">AgentKit</a></h3>
+      <p>A headless TypeScript agent runtime you drop into any project. One <code>createAgent()</code> config wires any model, your APIs and functions as tools, MCP, skills, memory, RAG, subagents and approvals. A plugin kernel where every part is replaceable. Workflows you declare or the model generates. A control plane for every tenant with traces, workflow graphs and approvals.</p>
+      <p>
+        <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+        <img src="https://img.shields.io/badge/MCP-6E56CF?style=flat-square" alt="MCP" />
+        <img src="https://img.shields.io/badge/AI%20Agents-2ED3A7?style=flat-square&labelColor=111A21" alt="AI Agents" />
+        <img src="https://img.shields.io/badge/Zod-3E67B1?style=flat-square&logo=zod&logoColor=white" alt="Zod" />
+        <img src="https://img.shields.io/badge/Turborepo-EF4444?style=flat-square&logo=turborepo&logoColor=white" alt="Turborepo" />
+      </p>
+      <p>
+        <a href="https://abyabyss.github.io/agentkit/#tour"><img src="https://img.shields.io/badge/▶%20Watch%20the%20tour%20with%20sound-2ED3A7?style=flat-square&labelColor=111A21" alt="Watch the tour with sound" /></a>
+        <a href="https://abyabyss.github.io/agentkit/doc/docs/getting-started/"><img src="https://img.shields.io/badge/Docs-111A21?style=flat-square" alt="Docs" /></a>
+        <img src="https://img.shields.io/badge/Source%20private%20%C2%B7%20open%20source%20soon-111A21?style=flat-square&logo=github" alt="Source currently private, open source soon" />
+      </p>
+    </td>
+  </tr>
+  <tr>
     <td width="50%" valign="top">
       <h3>📋&nbsp; <a href="https://github.com/AbyAbyss/Yankit">Yankit</a></h3>
       <p>A native macOS clipboard companion for yanking, stashing and recalling snippets — fast and keyboard-driven.</p>
