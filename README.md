@@ -100,6 +100,25 @@ high-performance backend systems and AI-powered products.
     </td>
   </tr>
   <tr>
+    <td colspan="2" valign="top">
+      <h3>🖱️&nbsp; <a href="https://abyabyss.github.io/helpy/">Helpy</a></h3>
+      <p>An AI companion that lives next to your cursor. Ask out loud and it looks at your screen, highlights the real button, draws arrows and lines over your apps, and walks you through step by step. Say a task and it plans background agents that ask before anything risky, with one-click undo for every file change. Bring your own model: Anthropic, OpenAI, Gemini or one running on your computer.</p>
+      <p>
+        <img src="https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />
+        <img src="https://img.shields.io/badge/Tauri-24C8D8?style=flat-square&logo=tauri&logoColor=white" alt="Tauri" />
+        <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React" />
+        <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+        <img src="https://img.shields.io/badge/MCP-6E56CF?style=flat-square" alt="MCP" />
+        <img src="https://img.shields.io/badge/macOS%20%C2%B7%20Windows%20%C2%B7%20Linux-111A21?style=flat-square" alt="macOS, Windows and Linux" />
+      </p>
+      <p>
+        <a href="https://abyabyss.github.io/helpy/#tour"><img src="https://img.shields.io/badge/▶%20Watch%20the%2045%20second%20tour-2ED3A7?style=flat-square&labelColor=111A21" alt="Watch the 45 second tour" /></a>
+        <a href="https://abyabyss.github.io/helpy/"><img src="https://img.shields.io/badge/Visit%20the%20site-111A21?style=flat-square" alt="Visit the site" /></a>
+        <img src="https://img.shields.io/badge/Source%20private%20%C2%B7%20open%20source%20soon-111A21?style=flat-square&logo=github" alt="Source currently private, open source soon" />
+      </p>
+    </td>
+  </tr>
+  <tr>
     <td width="50%" valign="top">
       <h3>📋&nbsp; <a href="https://github.com/AbyAbyss/Yankit">Yankit</a></h3>
       <p>A native macOS clipboard companion for yanking, stashing and recalling snippets — fast and keyboard-driven.</p>
