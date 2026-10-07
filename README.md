@@ -180,7 +180,7 @@ high-performance backend systems and AI-powered products.
       <h3>🚀&nbsp; Explore in 3D</h3>
       <p>See every project as an interactive 3D star system — fly a ship between the planets and dock to open each one.</p>
       <p>
-        <a href="https://abyabyss.github.io/explore.html"><img src="https://img.shields.io/badge/Launch%20abyabyss.github.io-2ED3A7?style=flat-square&labelColor=111A21" alt="Launch portfolio" /></a>
+        <a href="https://abyabyss.github.io/"><img src="https://img.shields.io/badge/Launch%20abyabyss.github.io-2ED3A7?style=flat-square&labelColor=111A21" alt="Launch portfolio" /></a>
       </p>
     </td>
   </tr>
