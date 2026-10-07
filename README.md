@@ -108,6 +108,9 @@ high-performance backend systems and AI-powered products.
         <img src="https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />
         <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React" />
       </p>
+      <p>
+        <a href="https://github.com/AbyAbyss/helpy"><img src="https://img.shields.io/badge/Open%20source-2ED3A7?style=flat-square&logo=github&labelColor=111A21" alt="Open source on GitHub" /></a>
+      </p>
     </td>
     <td width="50%" valign="top">
       <h3>📋&nbsp; <a href="https://github.com/AbyAbyss/Yankit">Yankit</a></h3>
