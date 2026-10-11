@@ -1,3 +1,4 @@
 videos/
 __pycache__/
 log_*.txt
+videos_list.txt
