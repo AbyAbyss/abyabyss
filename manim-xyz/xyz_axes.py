@@ -280,7 +280,7 @@ class ThreeDimensions(XYZScene):
         self.frame.reorient(0, 0, 0, center=axes.c2p(2.5, 2, 0), height=6.8)
         x_lab, y_lab, _ = self.axis_labels3d(axes)
         z_lab = self.label3d(R"z\ (\text{up})", axes.z_axis.get_end(),
-                             size=40, offset=0.75 * RIGHT, color=Z_COL)
+                             size=40, offset=0.8 * LEFT, color=Z_COL)
         self.add(x_lab, y_lab)
         self.wait(0.5)
 
@@ -300,7 +300,7 @@ class ThreeDimensions(XYZScene):
             self.play(ShowCreation(leg), run_time=1)
         drone = ball(axes.c2p(4, 3, 2), radius=0.12)
         shadow = Circle(radius=0.12, color=GREY_B, fill_opacity=0.6, stroke_width=0).move_to(axes.c2p(4, 3, 0))
-        lab = self.label3d(R"(4,\ 3,\ 2)", axes.c2p(4, 3, 2), offset=0.45 * UP)
+        lab = self.label3d(R"(4,\ 3,\ 2)", axes.c2p(4, 3, 2), offset=0.85 * RIGHT)
         lab[1].set_color(X_COL)
         lab[3].set_color(Y_COL)
         lab[5].set_color(Z_COL)
@@ -318,7 +318,7 @@ class ThreeDimensions(XYZScene):
             Tex(R"= \sqrt{29} \approx 5.39 \text{ m}", font_size=44),
         ).arrange(DOWN, aligned_edge=LEFT, buff=0.2)
         colored_xyz(formula[0])
-        formula.to_corner(UL).shift(0.9 * DOWN)
+        formula.to_corner(UR).shift(0.9 * DOWN)
         formula.fix_in_frame()
         box = BackgroundRectangle(formula, buff=0.25, fill_opacity=0.85).fix_in_frame()
         self.play(FadeIn(box), Write(formula[0]))
@@ -419,7 +419,7 @@ class QuestionDrone(XYZScene):
         self.wait()
         cap3 = caption("Answer: 13 m, even though the drone climbed 12 m and drifted only 5 m sideways.", size=30)
         self.play(FadeTransform(cap2, cap3))
-        self.play(self.frame.animate.reorient(-62, 72, 0), run_time=3)
+        self.play(self.frame.animate.reorient(-38, 72, 0), run_time=3)
         self.wait(2)
         self.play(*map(FadeOut, self.mobjects))
 

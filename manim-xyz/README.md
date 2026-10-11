@@ -2,7 +2,7 @@
 
 A short explainer video made with [3Blue1Brown's manim](https://github.com/3b1b/manim) (the `manimgl` package). It shows what the x, y and z axes mean in everyday situations, then works through three practice questions.
 
-Finished video: [`xyz_in_the_real_world.mp4`](xyz_in_the_real_world.mp4) (1080p, about 3 minutes)
+Finished video: [`xyz_in_the_real_world.mp4`](xyz_in_the_real_world.mp4) (1080p, 30 fps, 2 min 52 s, 5.8 MB)
 
 ## What's in it
 
