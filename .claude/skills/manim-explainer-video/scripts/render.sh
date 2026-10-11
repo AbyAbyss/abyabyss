@@ -3,9 +3,11 @@
 #   render.sh scenes.py "Intro Part1 Part2 Outro" [quality] [output.mp4]
 #   quality: -l (480p15, fast preview) | -m (720p30) | --hd (1080p30, default) | --uhd
 #   JOBS=2 render.sh ...   limit parallel renders (default: number of CPUs)
+#   RES=1080x1920 render.sh ...   vertical 9:16 for Shorts/Reels (the kit adapts its layout)
 set -euo pipefail
 
 FILE="$1"; SCENES=($2); QUALITY="${3:---hd}"
+[ -n "${RES:-}" ] && QUALITY="$QUALITY -r $RES"
 OUT="${4:-$(basename "${FILE%.py}").mp4}"
 JOBS="${JOBS:-$(nproc)}"
 cd "$(dirname "$FILE")"; FILE="$(basename "$FILE")"

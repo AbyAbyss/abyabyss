@@ -1,9 +1,12 @@
 ---
 name: manim-explainer-video
-description: Make narrated math or science explainer videos (3Blue1Brown style) with manimgl, the 3b1b/manim Python library, including offline AI voiceover, 3D scenes, worked examples and practice questions, rendered to a single MP4. Use this whenever someone wants an animated video that explains a formula, concept, proof or worked problem, mentions manim / manimgl / 3blue1brown / "math animation", wants to turn a lesson or set of questions into a video, or asks to add narration or a voiceover to a manim video, even if they don't name the library.
+description: Make narrated animated explainer videos (3Blue1Brown style) with manimgl, the 3b1b/manim Python library, for math, physics, technology, geography, history, finance or any topic that can be shown with diagrams, maps, charts, formulas and 3D shapes. Includes offline AI voiceover, worked examples, practice questions, and YouTube (16:9) or Shorts/Reels (9:16) output as a single MP4. Use this whenever someone wants an animated or whiteboard-style explainer video, a YouTube or Instagram educational video made from a script, mentions manim / manimgl / 3blue1brown, or asks to add narration to a manim video, even if they don't name the library.
 ---
 
 # Narrated explainer videos with manimgl
+
+Works for any topic you can draw: math, science, tech, maps, timelines, money. It is the wrong
+tool for live action, realistic people or character cartoons.
 
 This skill packages what it took to ship a real 5-minute narrated 3D explainer, so the next
 video skips the hours lost to installs, manimgl quirks and layout bugs. The workflow is:
@@ -12,7 +15,8 @@ video skips the hours lost to installs, manimgl quirks and layout bugs. The work
 Bundled files (paths relative to this skill's folder):
 - `scripts/setup.sh`: installs and smoke-tests everything (idempotent, about 5 min the first time).
 - `assets/manim_kit.py`: helpers and narration. Copy it next to your scene file.
-- `assets/example_scenes.py`: working 2D, 3D and practice-question scenes to copy from.
+- `assets/example_scenes.py`: working 2D, 3D and practice-question scenes (16:9) to copy from.
+- `assets/example_short.py`: the same ideas laid out for a vertical Short (9:16).
 - `scripts/render.sh`: renders scenes in parallel and joins them into one MP4.
 - `scripts/contact_sheet.sh`: tiles frames of a video into one PNG for visual QA.
 
@@ -78,6 +82,20 @@ Kit helpers and the problem each one solves (all observed in practice):
 - Unicode emoji don't render (no emoji font). Use words or simple shapes.
 - manimgl doesn't add the script's folder to `sys.path`. Keep the `sys.path.insert` line from the example.
 
+## Shorts and Reels (9:16)
+
+Render with `RES=1080x1920` (see step 5). manimgl then uses a frame 4.5 units wide and 8 tall,
+and the kit switches to portrait: headings and captions wrap and move into the safe zone, question
+cards re-wrap, and `formula_block` centres under the heading.
+
+What the kit can't do is re-flow a scene designed for 16:9. Axes 6 units wide or side-by-side
+layouts get clipped. Write Shorts as their own scenes, starting from `example_short.py`:
+- Stack vertically: heading, visual, formula or number, caption. Size diagrams to `FRAME_WIDTH - 0.9`.
+- Wrap anything that might be wide in `fit(mob)`.
+- In 3D, use `self.frame_on(theta, phi, center=..., width=<content width>)` instead of
+  `reorient`. It fits the content to the narrow frame and lifts it above the caption.
+- Hook in the first 3 seconds, one idea, 30 to 60 s total, font size 40 or more.
+
 ## 4. Preview fast, inspect visually, fix, repeat
 
 ```bash
@@ -103,10 +121,14 @@ ffmpeg -i final.mp4 -af volumedetect -vn -f null - 2>&1 | grep mean_volume   # a
 
 ```bash
 bash <skill>/scripts/render.sh scenes.py "Intro A B C Outro" --hd final.mp4
+RES=1080x1920 bash <skill>/scripts/render.sh short.py "Hook Point" --hd short.mp4   # vertical
 ```
 
-Parallel `--hd` (1080p30) on 4 CPUs takes very roughly 2× the video length in wall time. Use
-`-m` (720p) when speed matters. Commit the source, the kit and the MP4. Ignore `videos/`,
+Measured on 4 CPUs, rendering in parallel: a 5 min 34 s narrated video took **19 min at `--hd`**
+(1080p30, about 3.5× the video length) and **9 min at `-l`** (480p, including first-time voice
+synthesis). Scenes with large translucent surfaces (spheres, hills) are the slowest, at around
+3 frames per second. Iterate at `-l`, use `-m` (720p) when a mid-quality check is needed, and
+render `--hd` once, in the background, while you do other work. Commit the source, the kit and the MP4. Ignore `videos/`,
 `voice_cache/` and `logs/`.
 
 ## Timing from the reference project
@@ -115,7 +137,7 @@ Parallel `--hd` (1080p30) on 4 CPUs takes very roughly 2× the video length in w
 | --- | --- | --- |
 | Environment setup | ~25 min of trial and error | ~5 min unattended |
 | Fixing layout and quirk bugs | 4 full re-render cycles | mostly avoided by the kit |
-| 1080p render of a 5.5 min video | sequential, ~14 min for 3 min | parallel across CPUs |
+| Final 1080p render | 14 min for a 2:52 silent video, one scene at a time | 19 min for a 5:34 narrated video, scenes in parallel |
 
 The render itself is CPU-bound and can't drop to zero. Most of the savings come from not hitting
 the same bugs twice and from QA with contact sheets instead of full renders.

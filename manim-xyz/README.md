@@ -2,7 +2,9 @@
 
 A short explainer video made with [3Blue1Brown's manim](https://github.com/3b1b/manim) (the `manimgl` package). It shows what the x, y and z axes mean in everyday situations, then works through three practice questions.
 
-Finished video: [`xyz_in_the_real_world.mp4`](xyz_in_the_real_world.mp4) (1080p, 30 fps, 2 min 52 s, 5.8 MB)
+Finished video: [`xyz_in_the_real_world.mp4`](xyz_in_the_real_world.mp4) (1080p, 30 fps, 5 min 34 s, 11.3 MB, with narration)
+
+The narration is generated offline with the [Kokoro](https://github.com/thewh1teagle/kokoro-onnx) text-to-speech model (voice `af_heart`). Each scene paces itself to the voice through `say()` and `wait_voice()` in [`voiceover.py`](voiceover.py).
 
 ## What's in it
 
@@ -27,19 +29,26 @@ sudo apt-get install libpango1.0-dev libcairo2-dev pkg-config ffmpeg \
   texlive-latex-base texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra \
   texlive-science dvisvgm cm-super
 
-pip install manimgl
+pip install manimgl kokoro-onnx soundfile
 pip install audioop-lts   # only on Python 3.13+, where the audioop module was removed
 
-./render.sh       # 1080p, writes xyz_in_the_real_world.mp4
-./render.sh -l    # fast 480p preview
+# Voice model (about 120 MB) into ~/.cache/kokoro
+mkdir -p ~/.cache/kokoro && cd ~/.cache/kokoro
+curl -LO https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/kokoro-v1.0.int8.onnx
+curl -LO https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/voices-v1.0.bin
+cd -
+
+./render.sh       # 1080p, writes xyz_in_the_real_world.mp4 (about 19 min on 4 CPUs)
+./render.sh -l    # fast 480p preview (about 9 min the first time, while the voice is synthesized)
 ```
 
 To work on a single scene, render just that one, for example `manimgl xyz_axes.py QuestionHill -w -l`. Drop `-w` to open an interactive window instead of writing a file.
 
-On a machine without a display (a server or CI), `render.sh` runs manimgl inside `xvfb-run` automatically, since manimgl renders with OpenGL.
+`render.sh` renders all scenes in parallel. On a machine without a display (a server or CI) it starts a shared Xvfb virtual display, since manimgl renders with OpenGL.
 
 ## Things I hit while building it
 
 - `manimgl` 1.7.2 ignores `Tex(..., color=...)` on multi-character formulas, so the code calls `.set_color()` after creating them.
 - Labels in 3D are re-rotated every frame (`XYZScene.label3d`) so they always face the camera, even while it moves.
 - Markers that sit inside or behind a translucent surface (the hiker on the hill, the phone outside the Wi-Fi sphere) use `deactivate_depth_test()` so they stay visible.
+- manimgl leaves each scene's audio shorter than its video when it ends on silence, which pushes the voice out of sync once scenes are joined. `voiceover.py` pads the audio to the full scene length.

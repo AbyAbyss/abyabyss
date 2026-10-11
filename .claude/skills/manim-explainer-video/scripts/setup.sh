@@ -53,7 +53,8 @@ class Smoke(Scene):
         self.add(Tex(R"\sqrt{x^2 + y^2}"), Text("ok").shift(DOWN))
 EOF
 RUN="manimgl"; [ -z "${DISPLAY:-}" ] && RUN="xvfb-run -a -s '-screen 0 1280x720x24' manimgl"
-if (cd "$TMP" && eval $RUN smoke.py Smoke -s -l >"$TMP/log" 2>&1); then
+# -w matters: without it manimgl opens an interactive window and waits forever, even under Xvfb
+if (cd "$TMP" && timeout 180 bash -c "$RUN smoke.py Smoke -w -s -l" >"$TMP/log" 2>&1); then
   ok "manimgl renders (Tex + Text + OpenGL)"
 else
   echo "  [!!] smoke test failed:"; tail -5 "$TMP/log"

@@ -16,6 +16,7 @@ the comments say what went wrong.
 """
 import hashlib
 import os
+import textwrap
 from pathlib import Path
 
 from manimlib import *  # noqa: F401,F403
@@ -29,6 +30,11 @@ ANS_COL = YELLOW
 # manimgl's Text() default font isn't installed on most Linux boxes and falls back to an ugly
 # wide monospace that overflows the frame. Inter (fonts-inter) is clean and widely available.
 FONT = os.environ.get("MANIM_FONT", "Inter")
+
+# Render with `-r 1080x1920` for Shorts/Reels: manimgl then uses a 4.5 x 8 frame (9:16).
+# Apps cover roughly the top 15% and bottom 20% of a vertical video with buttons and text,
+# so in portrait the kit keeps headings and captions inside the middle of the screen.
+PORTRAIT = FRAME_WIDTH < FRAME_HEIGHT
 
 
 def T(text, **kwargs):
@@ -51,41 +57,59 @@ def color_symbols(mob, mapping=None):
     return mob
 
 
-def caption(text, size=34, color=WHITE):
-    """Subtitle-style line pinned to the bottom of the screen (stays put while the 3D camera moves)."""
-    cap = T(text, font_size=size, color=color)
+def caption(text, size=None, color=WHITE):
+    """Subtitle-style line pinned to the bottom of the screen (stays put while the 3D camera moves).
+    In portrait it wraps onto up to three lines and sits above the apps' bottom UI."""
+    if PORTRAIT:
+        text = "\n".join(textwrap.wrap(text, 26))
+        size = size or 30
+    cap = T(text, font_size=size or 34, color=color)
     cap.set_backstroke(BLACK, 6)
-    cap.set_max_width(FRAME_WIDTH - 0.8)   # long sentences shrink instead of running off-screen
-    cap.to_edge(DOWN, buff=0.45)
+    cap.set_max_width(FRAME_WIDTH - (0.5 if PORTRAIT else 0.8))   # shrink rather than run off-screen
+    cap.to_edge(DOWN, buff=1.7 if PORTRAIT else 0.45)
     cap.fix_in_frame()
     return cap
 
 
 def heading(text, size=44):
+    if PORTRAIT:
+        text = "\n".join(textwrap.wrap(text, 18))
     head = T(text, font_size=size, weight=BOLD)
     head.set_backstroke(BLACK, 6)
-    head.set_max_width(FRAME_WIDTH - 0.8)
-    head.to_edge(UP, buff=0.35)
+    head.set_max_width(FRAME_WIDTH - (0.5 if PORTRAIT else 0.8))
+    head.to_edge(UP, buff=1.2 if PORTRAIT else 0.35)
     head.fix_in_frame()
     return head
 
 
+def fit(mob, margin=0.4):
+    """Shrink a mobject (never enlarge) so it fits the frame width. Vital in portrait, where the frame is 4.5 wide."""
+    return mob.set_max_width(FRAME_WIDTH - 2 * margin)
+
+
 def formula_block(lines, size=42, corner=UL, shift=0.3 * DOWN, buff=0.22):
     """A stack of left-aligned Tex lines pinned to a screen corner (use for worked steps in 3D scenes).
-    Returns (group, background_box). Write the lines one by one: self.play(Write(group[i]))."""
+    In portrait it sits centred under the heading instead. Returns (group, background_box).
+    Write the lines one by one: self.play(Write(group[i]))."""
     group = VGroup(*(Tex(l, font_size=size) if isinstance(l, str) else l for l in lines))
     group.arrange(DOWN, aligned_edge=LEFT, buff=buff)
-    group.to_corner(corner).shift(shift)
+    if PORTRAIT:
+        fit(group)
+        group.to_edge(UP, buff=2.3)
+    else:
+        group.to_corner(corner).shift(shift)
     group.fix_in_frame()
     box = BackgroundRectangle(group, buff=0.2, fill_opacity=0.85).fix_in_frame()
     return group, box
 
 
 def question_card(number, lines, size=36):
+    if PORTRAIT:  # re-wrap for the narrow frame
+        lines = textwrap.wrap(" ".join(lines), 24)
     tag = T(f"Question {number}", font_size=44, weight=BOLD, color=ANS_COL)
     body = VGroup(*(T(l, font_size=size) for l in lines)).arrange(DOWN, buff=0.25)
     hint = T("Pause the video and try it!", font_size=28, color=GREY_B, slant=ITALIC)
-    return VGroup(tag, body, hint).arrange(DOWN, buff=0.6)
+    return fit(VGroup(tag, body, hint).arrange(DOWN, buff=0.6))
 
 
 def make_axes(x_range=(0, 5, 1), y_range=(0, 5, 1), z_range=(0, 4, 1),
@@ -178,6 +202,17 @@ class KitScene(Scene):
             if gap > 0:
                 writer.add_audio_segment(AudioSegment.silent(int(gap * 1000) + 1))
         super().tear_down()
+
+    # -- camera -------------------------------------------------------------
+    def frame_on(self, theta, phi, center, width, height=None):
+        """Point the 3D camera at `center` so content about `width` units wide (and `height` tall)
+        fits on screen in either orientation. Pass the visible extent of your axes or objects."""
+        need = max(height or 0, width * FRAME_HEIGHT / FRAME_WIDTH) * 1.1
+        self.frame.reorient(theta, phi, 0, center=center, height=need)
+        if PORTRAIT:
+            # Lift the content into the upper-middle so the bottom caption never covers it
+            camera_up = self.frame.get_orientation().as_matrix()[:, 1]
+            self.frame.shift(-0.14 * need * camera_up)
 
     # -- labels in 3D -----------------------------------------------------
     def label3d(self, source, point, size=32, offset=0.35 * UP, color=WHITE):
