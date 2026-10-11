@@ -7,7 +7,13 @@ Render every scene (1080p) and stitch them together with:
 Or render one scene while iterating (low quality, opens no window):
     manimgl xyz_axes.py ThreeDimensions -w -l
 """
+import os
+import sys
+
 from manimlib import *
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from voiceover import VoiceoverMixin  # noqa: E402
 
 # Standard convention in math, CAD and most 3D software: x = red, y = green, z = blue
 X_COL = RED_C
@@ -73,8 +79,8 @@ def ball(point, color=ANS_COL, radius=0.09):
     return Sphere(radius=radius, color=color).move_to(point)
 
 
-class XYZScene(Scene):
-    """Shared helpers for labels that sit in 3D space but face the camera."""
+class XYZScene(VoiceoverMixin, Scene):
+    """Narration (say / wait_voice) plus helpers for labels that sit in 3D space but face the camera."""
 
     def face_camera(self, mob, point, offset=0.35 * UP):
         rot = self.frame.get_orientation().as_matrix()
@@ -128,15 +134,18 @@ class XYZScene(Scene):
         )
 
 
+
+
 class Intro(XYZScene):
     def construct(self):
         title = Tex(R"x,\ y,\ z", font_size=120)
         colored_xyz(title)
         sub = T("How three letters describe every place in the real world", font_size=36)
         sub.next_to(title, DOWN, buff=0.5)
+        self.say("x, y, and z. Three letters that can describe any place in the real world.")
         self.play(Write(title), run_time=1.5)
         self.play(FadeIn(sub, shift=0.3 * UP))
-        self.wait(1.5)
+        self.wait_voice()
 
         q = T(
             "Every x, y, z formula is really answering\n"
@@ -149,10 +158,19 @@ class Intro(XYZScene):
             T("How far up or down?   →  z", font_size=36, t2c={"z": Z_COL}),
         ).arrange(DOWN, aligned_edge=LEFT, buff=0.35)
         group = VGroup(q, qs).arrange(DOWN, buff=0.6)
+        self.say("Whenever you see a formula with x, y, and z, "
+                 "it's really answering up to three questions about position.")
         self.play(FadeOut(VGroup(title, sub), shift=UP), FadeIn(q, shift=UP))
-        for line in qs:
+        self.wait_voice()
+        for line, text in zip(qs, [
+            "How far left or right? That's x.",
+            "How far forward or back? That's y.",
+            "And how far up or down? That's z.",
+        ]):
+            self.say(text)
             self.play(FadeIn(line, shift=0.3 * RIGHT), run_time=0.8)
-        self.wait(2.5)
+            self.wait_voice()
+        self.wait(0.5)
         self.play(FadeOut(group))
 
 
@@ -164,8 +182,10 @@ class OneDimension(XYZScene):
         line.shift(0.3 * DOWN)
         x_lab = Tex("x", font_size=48).set_color(X_COL).next_to(line.get_end(), UR, buff=0.15)
 
+        self.say("Let's start with just one direction. Picture a straight road, drawn as a number line called x.")
         self.play(FadeIn(head))
         self.play(ShowCreation(line), Write(x_lab))
+        self.wait_voice()
 
         # A little car on a straight road
         body = RoundedRectangle(width=1.0, height=0.38, corner_radius=0.12,
@@ -180,7 +200,6 @@ class OneDimension(XYZScene):
         car.next_to(line.n2p(0), UP, buff=0.05)
 
         cap = caption("A car on a straight road only needs ONE number: how far it has gone.")
-        self.play(FadeIn(car), FadeIn(cap))
         x_tracker = ValueTracker(0)
         car.add_updater(lambda m: m.next_to(line.n2p(x_tracker.get_value()), UP, buff=0.05))
         readout = Tex(R"x = 0.0\text{ km}", font_size=48)
@@ -188,17 +207,21 @@ class OneDimension(XYZScene):
             Tex(Rf"x = {x_tracker.get_value():.1f}\text{{ km}}", font_size=48)
             .set_color_by_tex("x", X_COL).move_to(1.8 * UP)
         ))
+        self.say("A car on this road only needs one number to say where it is: how far it has driven.")
+        self.play(FadeIn(car), FadeIn(cap))
         self.add(readout)
         self.play(x_tracker.animate.set_value(6), run_time=3)
-        self.wait()
+        self.wait_voice()
+        self.say("Six kilometres. Now back to two and a half. One number, x, is enough.")
         self.play(x_tracker.animate.set_value(2.5), run_time=1.5)
         car.clear_updaters()
         readout.clear_updaters()
-        self.wait()
+        self.wait_voice()
 
         new_cap = caption("Formulas with only x (like speed = distance / time) live on a single line.")
+        self.say("Formulas that only use x, like speed equals distance over time, live on a single line like this.")
         self.play(FadeTransform(cap, new_cap))
-        self.wait(2.5)
+        self.wait_voice()
         self.play(*map(FadeOut, [head, line, x_lab, car, readout, new_cap]))
 
 
@@ -217,30 +240,36 @@ class TwoDimensions(XYZScene):
         east = T("east", font_size=24, color=X_COL).next_to(x_lab, DOWN, buff=0.1)
         north = T("north", font_size=24, color=Y_COL).next_to(y_lab, RIGHT, buff=0.15)
 
+        self.say("Now add a second direction, y, at a right angle to x. Together they make a map.")
         self.play(FadeIn(head))
         self.play(ShowCreation(axes.x_axis), Write(x_lab), FadeIn(east))
         self.play(ShowCreation(axes.y_axis), Write(y_lab), FadeIn(north))
         self.play(FadeIn(grid))
+        self.wait_voice()
 
         cap = caption("City streets: you're at (0, 0). The coffee shop is 4 blocks east, 3 blocks north.")
-        self.play(FadeIn(cap))
-
         p = axes.c2p(4, 3, 0)
         legs = self.path_legs(axes, (4, 3, 0))[:2]
-        self.play(ShowCreation(legs[0]))
-        self.play(ShowCreation(legs[1]))
         dot = Dot(p, radius=0.12, color=ANS_COL)
         cup = T("coffee shop", font_size=26, color=ANS_COL).next_to(dot, UP, buff=0.15)
         coord = Tex("(4,\\ 3)", font_size=44).next_to(dot, RIGHT, buff=0.5)
         coord[1].set_color(X_COL)
         coord[3].set_color(Y_COL)
+        self.say("Say you're standing at zero, zero, and a coffee shop is four blocks east "
+                 "and three blocks north. Its address is four, three.")
+        self.play(FadeIn(cap))
+        self.play(ShowCreation(legs[0]))
+        self.play(ShowCreation(legs[1]))
         self.play(GrowFromCenter(dot), FadeIn(cup), Write(coord))
-        self.wait()
+        self.wait_voice()
 
         new_cap = caption("Walking the streets: 4 + 3 = 7 blocks.  As the crow flies?")
-        self.play(FadeTransform(cap, new_cap))
         hyp = Line(axes.get_origin(), p, color=ANS_COL, stroke_width=6)
+        self.say("Walking along the streets, that's four plus three, seven blocks. "
+                 "But how far is it as the crow flies?")
+        self.play(FadeTransform(cap, new_cap))
         self.play(ShowCreation(hyp))
+        self.wait_voice()
 
         formula = VGroup(
             Tex(R"d = \sqrt{x^2 + y^2}", font_size=48),
@@ -250,15 +279,21 @@ class TwoDimensions(XYZScene):
         formula.to_corner(UR).shift(0.9 * DOWN)
         colored_xyz(formula[0])
         box = BackgroundRectangle(formula, buff=0.25, fill_opacity=0.85)
+        self.say("The straight path is the long side of a right triangle, so we use Pythagoras. "
+                 "Distance equals the square root of x squared plus y squared.")
         self.play(FadeIn(box), Write(formula[0]))
-        self.wait(0.5)
+        self.wait_voice()
+        self.say("That's the square root of sixteen plus nine, which is the square root of twenty-five. "
+                 "Exactly five blocks.")
         self.play(Write(formula[1]))
         self.play(Write(formula[2]))
         formula[2][-7:].set_color(ANS_COL)
-        self.wait(1)
+        self.wait_voice()
+
         cap3 = caption("That's Pythagoras: the x-move and y-move are the two short sides of a right triangle.", size=30)
+        self.say("The x move and the y move are simply the two short sides of that triangle.")
         self.play(FadeTransform(new_cap, cap3))
-        self.wait(3)
+        self.wait_voice(0.5)
         self.play(*map(FadeOut, self.mobjects))
 
 
@@ -282,36 +317,38 @@ class ThreeDimensions(XYZScene):
         z_lab = self.label3d(R"z\ (\text{up})", axes.z_axis.get_end(),
                              size=40, offset=0.8 * LEFT, color=Z_COL)
         self.add(x_lab, y_lab)
-        self.wait(0.5)
 
         cap = caption("A flat map can't tell a drone from the ground below it. We need a third direction.")
+        self.say("But a map is flat. It can't tell a drone apart from the spot on the ground right below it.")
         self.play(FadeIn(cap))
+        self.wait_voice()
+        self.say("So let's tilt our view and add a third direction, z, pointing straight up.")
         self.play(
             self.frame.animate.reorient(-35, 68, 0, center=axes.c2p(2.4, 2, 1.1), height=6.8),
             run_time=3,
         )
         self.play(ShowCreation(z_axis), run_time=1.5)
         self.play(FadeIn(z_lab))
+        self.wait_voice()
 
         cap2 = caption("A drone hovers 4 m east, 3 m north and 2 m up.  Its address is (4, 3, 2).")
-        self.play(FadeTransform(cap, cap2))
         legs = self.path_legs(axes, (4, 3, 2))
-        for leg in legs:
-            self.play(ShowCreation(leg), run_time=1)
         drone = ball(axes.c2p(4, 3, 2), radius=0.12)
         shadow = Circle(radius=0.12, color=GREY_B, fill_opacity=0.6, stroke_width=0).move_to(axes.c2p(4, 3, 0))
         lab = self.label3d(R"(4,\ 3,\ 2)", axes.c2p(4, 3, 2), offset=0.85 * RIGHT)
         lab[1].set_color(X_COL)
         lab[3].set_color(Y_COL)
         lab[5].set_color(Z_COL)
+        self.say("A drone hovers four metres east, three metres north, and two metres up. "
+                 "Its address is four, three, two.")
+        self.play(FadeTransform(cap, cap2))
+        for leg in legs:
+            self.play(ShowCreation(leg), run_time=1)
         self.play(GrowFromCenter(drone), FadeIn(shadow), Write(lab))
-        self.wait()
+        self.wait_voice()
 
         cap3 = caption("Same idea as before, just one more term under the square root:")
-        self.play(FadeTransform(cap2, cap3))
         diag = Line(axes.get_origin(), axes.c2p(4, 3, 2), color=ANS_COL, stroke_width=6)
-        self.play(ShowCreation(diag))
-
         formula = VGroup(
             Tex(R"d = \sqrt{x^2 + y^2 + z^2}", font_size=44),
             Tex(R"= \sqrt{16 + 9 + 4}", font_size=44),
@@ -321,12 +358,20 @@ class ThreeDimensions(XYZScene):
         formula.to_corner(UR).shift(0.9 * DOWN)
         formula.fix_in_frame()
         box = BackgroundRectangle(formula, buff=0.25, fill_opacity=0.85).fix_in_frame()
+        self.say("How far is it from the starting corner? The formula grows by just one term: "
+                 "the square root of x squared plus y squared plus z squared.")
+        self.play(FadeTransform(cap2, cap3))
+        self.play(ShowCreation(diag))
         self.play(FadeIn(box), Write(formula[0]))
+        self.wait_voice()
+        self.say("Sixteen plus nine plus four is twenty-nine, so the drone is about five point three nine metres away.")
         self.play(Write(formula[1]))
         self.play(Write(formula[2]))
-        self.wait(1.5)
+        self.wait_voice()
 
         cap4 = caption("Change any one number and the drone moves along exactly one axis.")
+        self.say("Change just one of the three numbers, and the drone moves along exactly one axis. "
+                 "Here only z changes, so it only goes up and down.")
         self.play(FadeTransform(cap3, cap4))
         self.play(FadeOut(lab), FadeOut(diag), FadeOut(legs), FadeOut(head))
         z_t = ValueTracker(2)
@@ -337,8 +382,8 @@ class ThreeDimensions(XYZScene):
         self.play(z_t.animate.set_value(3), run_time=1.2)
         self.play(z_t.animate.set_value(0.6), run_time=1.5)
         self.play(z_t.animate.set_value(2), run_time=1)
+        self.wait_voice()
         self.play(self.frame.animate.reorient(20, 72, 0), run_time=4)
-        self.wait()
         self.play(*map(FadeOut, self.mobjects))
 
 
@@ -356,8 +401,11 @@ class QuestionDrone(XYZScene):
             "and flies in a straight line to a balcony at B(4, 6, 12).",
             "Distances are in metres. How far does it fly?",
         ])
+        self.say("Question one. A delivery drone takes off from a roof at point A, one, two, zero, "
+                 "and flies in a straight line to a balcony at point B, four, six, twelve. "
+                 "How far does it fly? Pause the video and give it a try.")
         self.play(FadeIn(card, shift=UP))
-        self.wait(4)
+        self.wait_voice(2)
         self.play(FadeOut(card))
 
         axes = make_axes(x_range=(0, 5, 1), y_range=(0, 7, 1), z_range=(0, 12, 2),
@@ -365,14 +413,12 @@ class QuestionDrone(XYZScene):
         axes.center()
         self.frame.reorient(-50, 70, 0, center=axes.c2p(2.5, 3.5, 5.0), height=10.4)
         labels = VGroup(self.axis_labels3d(axes), self.z_numbers3d(axes, range(2, 13, 2)))
-        self.play(FadeIn(axes), FadeIn(labels))
 
         A, B = (1, 2, 0), (4, 6, 12)
         pa, pb = axes.c2p(*A), axes.c2p(*B)
         dot_a, dot_b = ball(pa, color=WHITE), ball(pb, color=WHITE)
         lab_a = self.label3d(R"A(1,\ 2,\ 0)", pa, size=36, offset=0.45 * RIGHT + 0.2 * DOWN)
         lab_b = self.label3d(R"B(4,\ 6,\ 12)", pb, size=36, offset=0.4 * UP)
-        self.play(GrowFromCenter(dot_a), GrowFromCenter(dot_b), Write(lab_a), Write(lab_b))
 
         # Break the flight into one move along each axis
         c1 = axes.c2p(4, 2, 0)
@@ -394,15 +440,22 @@ class QuestionDrone(XYZScene):
         diffs.fix_in_frame()
 
         cap = caption("Step 1: how much does each coordinate change?")
+        self.say("Here are the two points. Step one: find how much each coordinate changes.")
+        self.play(FadeIn(axes), FadeIn(labels))
+        self.play(GrowFromCenter(dot_a), GrowFromCenter(dot_b), Write(lab_a), Write(lab_b))
         self.play(FadeIn(cap))
-        for leg, d in zip(legs, diffs):
+        self.wait_voice()
+        for leg, d, text in zip(legs, diffs, [
+            "x goes from one to four, a change of three.",
+            "y goes from two to six, a change of four.",
+            "And z goes from zero to twelve, a change of twelve.",
+        ]):
+            self.say(text)
             self.play(ShowCreation(leg), Write(d), run_time=1.2)
-        self.wait()
+            self.wait_voice()
 
         flight = Line(pa, pb, color=ANS_COL, stroke_width=6)
         cap2 = caption("Step 2: plug the changes into the 3D distance formula.")
-        self.play(FadeTransform(cap, cap2), ShowCreation(flight))
-
         formula = VGroup(
             Tex(R"d = \sqrt{(\Delta x)^2 + (\Delta y)^2 + (\Delta z)^2}", font_size=40),
             Tex(R"= \sqrt{3^2 + 4^2 + 12^2}", font_size=40),
@@ -413,14 +466,25 @@ class QuestionDrone(XYZScene):
         formula.to_corner(UR).shift(0.2 * DOWN)
         formula.fix_in_frame()
         box = BackgroundRectangle(formula, buff=0.2, fill_opacity=0.85).fix_in_frame()
+        self.say("Step two: put those changes into the 3D distance formula.")
+        self.play(FadeTransform(cap, cap2), ShowCreation(flight))
         self.play(FadeIn(box), Write(formula[0]))
-        for part in formula[1:]:
-            self.play(Write(part))
-        self.wait()
+        self.wait_voice()
+        self.say("Three squared plus four squared plus twelve squared is nine plus sixteen "
+                 "plus one hundred forty-four, which is one hundred sixty-nine.")
+        self.play(Write(formula[1]))
+        self.play(Write(formula[2]))
+        self.wait_voice()
+        self.say("And the square root of one hundred sixty-nine is thirteen. The drone flies thirteen metres.")
+        self.play(Write(formula[3]))
+        self.wait_voice()
+
         cap3 = caption("Answer: 13 m, even though the drone climbed 12 m and drifted only 5 m sideways.", size=30)
+        self.say("That's barely more than the twelve metres it climbed, because it only drifted "
+                 "five metres sideways. Most of this trip is straight up.")
         self.play(FadeTransform(cap2, cap3))
         self.play(self.frame.animate.reorient(-38, 72, 0), run_time=3)
-        self.wait(2)
+        self.wait_voice(0.5)
         self.play(*map(FadeOut, self.mobjects))
 
 
@@ -431,15 +495,17 @@ class QuestionHill(XYZScene):
             "z = 4 − (x² + y²) / 4",
             "How high is a hiker standing at x = 2, y = 2?",
         ])
+        self.say("Question two. A hill's height, in hundreds of metres, is z equals four, minus "
+                 "x squared plus y squared over four. How high is a hiker standing at x equals two, "
+                 "y equals two? Pause and try it.")
         self.play(FadeIn(card, shift=UP))
-        self.wait(4)
+        self.wait_voice(2)
         self.play(FadeOut(card))
 
         axes = make_axes(x_range=(-4, 4, 1), y_range=(-4, 4, 1), z_range=(0, 4.5, 1),
                          width=6, height=6, depth=3.4, numbers=False)
         self.frame.reorient(-40, 66, 0, center=axes.c2p(0, 0, 1.6), height=7.4)
         labels = VGroup(self.axis_labels3d(axes), self.z_numbers3d(axes, range(1, 5)))
-        self.play(FadeIn(axes), FadeIn(labels))
 
         def f(x, y):
             return 4 - (x * x + y * y) / 4
@@ -451,7 +517,11 @@ class QuestionHill(XYZScene):
             color=GREEN_E, opacity=0.5,
         )
         cap = caption("z = f(x, y): every spot (x, y) on the map gets its own height z.")
+        self.say("This time z isn't a fixed number. It depends on x and y. Every spot on the map "
+                 "gets its own height, and together those heights make this hill.")
+        self.play(FadeIn(axes), FadeIn(labels))
         self.play(FadeIn(cap), ShowCreation(hill), run_time=2.5)
+        self.wait_voice()
 
         foot = axes.c2p(2, 2, 0)
         top = axes.c2p(2, 2, f(2, 2))
@@ -464,8 +534,9 @@ class QuestionHill(XYZScene):
         # Draw the answer on top of the translucent hill so it never hides behind it
         for mob in (ground_legs, pole, hiker):
             mob.deactivate_depth_test()
+        self.say("The hiker stands two steps along x and two along y.")
         self.play(ShowCreation(ground_legs[0]), ShowCreation(ground_legs[1]))
-        self.play(ShowCreation(pole), GrowFromCenter(hiker))
+        self.wait_voice()
 
         formula = VGroup(
             Tex(R"z = 4 - \frac{x^2 + y^2}{4}", font_size=42),
@@ -477,13 +548,21 @@ class QuestionHill(XYZScene):
         formula.to_corner(UL).shift(0.3 * DOWN)
         formula.fix_in_frame()
         box = BackgroundRectangle(formula, buff=0.2, fill_opacity=0.85).fix_in_frame()
+        self.say("Plug in two and two. Two squared plus two squared is eight. "
+                 "Eight over four is two. And four minus two is two.")
         self.play(FadeIn(box), Write(formula[0]))
-        for part in formula[1:]:
-            self.play(Write(part))
+        self.play(Write(formula[1]))
+        self.play(Write(formula[2]), ShowCreation(pole), GrowFromCenter(hiker))
+        self.wait_voice()
+        self.say("So the hiker is at height two, which means two hundred metres up.")
+        self.play(Write(formula[3]))
+        self.wait_voice()
+
         cap2 = caption("x and y say WHERE on the map; the formula turns them into z, the height.")
+        self.say("x and y tell you where you are on the map. The formula turns them into z, the height.")
         self.play(FadeTransform(cap, cap2))
         self.play(self.frame.animate.reorient(40, 70, 0), run_time=5)
-        self.wait(1.5)
+        self.wait_voice()
         self.play(*map(FadeOut, self.mobjects))
 
 
@@ -493,8 +572,10 @@ class QuestionWifi(XYZScene):
             "A Wi-Fi router at (0, 0, 0) reaches 5 m in every direction.",
             "Your phone is at (3, 4, 1). Do you have signal?",
         ])
+        self.say("Question three. A Wi-Fi router sits at the origin and reaches five metres in every "
+                 "direction. Your phone is at three, four, one. Do you have signal? Pause and think about it.")
         self.play(FadeIn(card, shift=UP))
-        self.wait(4)
+        self.wait_voice(2)
         self.play(FadeOut(card))
 
         u = 0.55
@@ -502,25 +583,30 @@ class QuestionWifi(XYZScene):
                          width=12 * u, height=12 * u, depth=12 * u, numbers=False)
         self.frame.reorient(-35, 70, 0, center=ORIGIN, height=7.6)
         labels = self.axis_labels3d(axes)
-        self.play(FadeIn(axes), FadeIn(labels))
 
         cap = caption("All points exactly 5 m away form a sphere:  x² + y² + z² = 5² = 25")
         sphere = Sphere(radius=5 * u, color=BLUE_E, opacity=0.18)
         mesh = SurfaceMesh(sphere, resolution=(13, 9))
         mesh.set_stroke(BLUE_B, 1, opacity=0.35)
         router = ball(axes.c2p(0, 0, 0), color=WHITE, radius=0.1)
+        self.say("Every point exactly five metres from the router forms a sphere. "
+                 "Its equation is x squared plus y squared plus z squared equals twenty-five.")
+        self.play(FadeIn(axes), FadeIn(labels))
         self.play(FadeIn(cap), GrowFromCenter(router))
         self.play(ShowCreation(sphere), ShowCreation(mesh), run_time=2)
+        self.wait_voice()
 
         phone_p = axes.c2p(3, 4, 1)
         legs = self.path_legs(axes, (3, 4, 1))
-        for leg in legs:
-            self.play(ShowCreation(leg), run_time=0.7)
         phone = ball(phone_p, color=RED, radius=0.15)
         lab = self.label3d(R"\text{phone }(3,\ 4,\ 1)", phone_p, size=40, offset=0.45 * UP)
         for mob in (legs, phone, lab):
             mob.deactivate_depth_test()
+        self.say("Now find the phone: three along x, four along y, and one up.")
+        for leg in legs:
+            self.play(ShowCreation(leg), run_time=0.7)
         self.play(GrowFromCenter(phone), Write(lab))
+        self.wait_voice()
 
         formula = VGroup(
             Tex(R"x^2 + y^2 + z^2", font_size=42),
@@ -533,13 +619,21 @@ class QuestionWifi(XYZScene):
         formula.fix_in_frame()
         box = BackgroundRectangle(formula, buff=0.2, fill_opacity=0.85).fix_in_frame()
         cap2 = caption("Compare x² + y² + z² with 25: less means inside, more means outside.")
+        self.say("Put the phone's numbers into the left side of the equation. "
+                 "Nine plus sixteen plus one is twenty-six.")
         self.play(FadeTransform(cap, cap2), FadeIn(box), Write(formula[0]))
-        for part in formula[1:]:
-            self.play(Write(part))
+        self.play(Write(formula[1]))
+        self.play(Write(formula[2]))
+        self.wait_voice()
+        self.say("Twenty-six is bigger than twenty-five, so the phone is just outside the sphere.")
+        self.play(Write(formula[3]))
+        self.wait_voice()
+
         cap3 = caption("Just outside! √26 ≈ 5.10 m. Step 0.1 m closer and the signal comes back.", size=32)
+        self.say("It's about five point one metres away. Step a little closer, and the signal comes back.")
         self.play(FadeTransform(cap2, cap3))
         self.play(self.frame.animate.reorient(10, 80, 0), run_time=4)
-        self.wait(2)
+        self.wait_voice(0.5)
         self.play(*map(FadeOut, self.mobjects))
 
 
@@ -555,17 +649,29 @@ class Outro(XYZScene):
             T("Physics:  a ball's position over time, (x(t), y(t), z(t))", font_size=32),
         ).arrange(DOWN, aligned_edge=LEFT, buff=0.35)
         rows.next_to(head, DOWN, buff=0.6)
+        self.say("So where do x, y, and z show up in real life?")
         self.play(FadeIn(head))
-        for row in rows:
+        self.wait_voice()
+        for row, text in zip(rows, [
+            "GPS and maps use x and y for position, and z for altitude.",
+            "3D printers and CNC machines move their tool to an exact x, y, z point.",
+            "In video games and animation, every object has an x, y, z position.",
+            "Architects and engineers use them to place walls, floors, and heights.",
+            "And in physics, a moving ball's x, y, and z each change over time.",
+        ]):
+            self.say(text)
             self.play(FadeIn(row, shift=0.3 * RIGHT), run_time=0.7)
+            self.wait_voice()
         note = T(
             "Heads-up: some tools (Minecraft, Unity) call the up direction y instead of z.\n"
             "The math is the same, only the names change.",
             font_size=26, color=GREY_B,
         )
         note.to_edge(DOWN, buff=0.5)
+        self.say("One heads-up: some software, like Minecraft and Unity, calls the up direction y "
+                 "instead of z. The math is exactly the same. Only the names change.")
         self.play(FadeIn(note))
-        self.wait(4)
+        self.wait_voice()
 
         summary = VGroup(
             Tex(R"\text{2D distance: } d = \sqrt{x^2 + y^2}", font_size=44),
@@ -576,7 +682,9 @@ class Outro(XYZScene):
         for s in summary:
             colored_xyz(s)
         recap = T("The four formulas from this video", font_size=40, weight=BOLD).to_edge(UP)
+        self.say("Here are the four formulas from this video: two distance formulas, a surface, and a sphere. "
+                 "With them, you can describe almost any position in the real world.")
         self.play(FadeOut(VGroup(rows, note)), FadeTransform(head, recap))
         self.play(LaggedStartMap(FadeIn, summary, lag_ratio=0.3), run_time=2.5)
-        self.wait(4)
+        self.wait_voice(1.5)
         self.play(FadeOut(VGroup(recap, summary)))
