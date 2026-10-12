@@ -153,13 +153,16 @@ high-performance backend systems and AI-powered products.
       </p>
     </td>
     <td width="50%" valign="top">
-      <h3>🌐&nbsp; <a href="https://github.com/AbyAbyss/RestClient">RestClient</a></h3>
-      <p>A fast, open-source desktop REST client with a cartoon UI — send HTTP requests, manage collections and environments, run Postman-style test scripts, inspect response timelines, and load-test APIs.</p>
+      <h3>⚡&nbsp; <a href="https://abyabyss.github.io/term-rest-client.html">term-rest-client</a></h3>
+      <p>An open-source API client for the terminal or the browser, run as <code>rest</code>. REST, GraphQL, streams, WebSockets and load testing, with collections, environments and tests, in one Go binary.</p>
       <p>
-        <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
-        <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React" />
-        <img src="https://img.shields.io/badge/Tauri-24C8D8?style=flat-square&logo=tauri&logoColor=white" alt="Tauri" />
-        <img src="https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />
+        <img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Go" />
+        <img src="https://img.shields.io/badge/Terminal%20UI-111A21?style=flat-square&logo=gnometerminal&logoColor=white" alt="Terminal UI" />
+        <img src="https://img.shields.io/badge/GraphQL-E10098?style=flat-square&logo=graphql&logoColor=white" alt="GraphQL" />
+        <img src="https://img.shields.io/badge/Load%20testing-2ED3A7?style=flat-square&labelColor=111A21" alt="Load testing" />
+      </p>
+      <p>
+        <a href="https://github.com/AbyAbyss/cli-rest-client"><img src="https://img.shields.io/badge/Open%20source-2ED3A7?style=flat-square&logo=github&labelColor=111A21" alt="Open source on GitHub" /></a>
       </p>
     </td>
   </tr>
