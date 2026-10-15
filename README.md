@@ -28,7 +28,7 @@ high-performance backend systems and AI-powered products.
 - ⚙️ I build **distributed systems**, secure event-driven architectures and clean, scalable APIs
 - 📊 I architect **data & analytics platforms** — `Airbyte → DuckDB → Apache Airflow`
 - 🔐 Background in **Zero Trust security**, gateways and cross-platform desktop apps
-- 🏗️ Currently leading **backend, platform, data & AI** initiatives at **Josys**
+- 🏗️ Currently leading **backend, platform, data & AI** initiatives
 - 💬 Ask me about backend architecture, AI engineering, MCP, or building things that scale
 
 ---
