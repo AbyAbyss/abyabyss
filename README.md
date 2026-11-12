@@ -1,14 +1,8 @@
 <div align="center">
 
-# Hi, I'm Aby Saji Pappachan 👋
+<a href="https://abyabyss.github.io"><img src="./assets/hero.svg" width="100%" alt="Aby Saji Pappachan. Technical Lead, Backend and AI Engineer. Open to Backend, AI and Platform roles. Walsall, United Kingdom." /></a>
 
-### Technical Lead · Backend &amp; AI Engineer
-
-[![Open to Work](https://img.shields.io/badge/🟢_OPEN_TO_WORK-2ED3A7?style=for-the-badge&labelColor=111A21)](mailto:abyrocksaji@gmail.com)
-
-[![Typing SVG](https://readme-typing-svg.demolab.com/?font=Inter&weight=600&size=22&duration=3200&pause=800&color=2ED3A7&center=true&vCenter=true&width=640&lines=Building+scalable+backend+systems;Designing+AI+agents+%26+LLM+platforms;MCP+%7C+Generative+AI+%7C+Distributed+Systems;8+years+across+Node.js+%7C+Python+%7C+Golang)](https://abyabyss.github.io)
-
-📍 Walsall, United Kingdom &nbsp; · &nbsp; 🟢 Open to Backend / AI / Platform roles
+<br />
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-abyabyss.github.io-2ED3A7?style=for-the-badge&logo=firefoxbrowser&logoColor=08140F)](https://abyabyss.github.io)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-aby--saji-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aby-saji)
@@ -17,7 +11,7 @@
 
 </div>
 
----
+<img src="./assets/divider.svg" width="100%" alt="" />
 
 ## 🚀 About Me
 
@@ -31,7 +25,9 @@ high-performance backend systems and AI-powered products.
 - 🏗️ Currently leading **backend, platform, data & AI** initiatives
 - 💬 Ask me about backend architecture, AI engineering, MCP, or building things that scale
 
----
+<img src="./assets/pipeline.svg" width="100%" alt="AI platform: LLM models, agent runtime, MCP, tools and APIs. Data platform: Airbyte, DuckDB, Airflow, analytics." />
+
+<img src="./assets/divider.svg" width="100%" alt="" />
 
 ## 🏅 GitHub Achievements
 
@@ -45,7 +41,7 @@ high-performance backend systems and AI-powered products.
 
 </div>
 
----
+<img src="./assets/divider.svg" width="100%" alt="" />
 
 ## 🛠️ Tech Stack
 
@@ -76,7 +72,7 @@ high-performance backend systems and AI-powered products.
 ![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
 ![Rust](https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white)
 
----
+<img src="./assets/divider.svg" width="100%" alt="" />
 
 ## 🌟 Featured Projects
 
@@ -189,26 +185,42 @@ high-performance backend systems and AI-powered products.
   </tr>
 </table>
 
----
+<img src="./assets/divider.svg" width="100%" alt="" />
 
 ## 📊 GitHub Stats
 
 <div align="center">
 
-<img height="170" alt="Aby's GitHub stats" src="https://github-readme-stats.shion.dev/api?username=abyabyss&theme=dark&hide_border=false&include_all_commits=false&count_private=false" />
-<img height="170" alt="Top languages" src="https://github-readme-stats.shion.dev/api/top-langs/?username=abyabyss&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.shion.dev/api?username=abyabyss&theme=dark&hide_border=false&include_all_commits=false&count_private=false" />
+  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.shion.dev/api?username=abyabyss&theme=default&hide_border=false&include_all_commits=false&count_private=false" />
+  <img height="170" alt="Aby's GitHub stats" src="https://github-readme-stats.shion.dev/api?username=abyabyss&theme=dark&hide_border=false&include_all_commits=false&count_private=false" />
+</picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.shion.dev/api/top-langs/?username=abyabyss&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact" />
+  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.shion.dev/api/top-langs/?username=abyabyss&theme=default&hide_border=false&include_all_commits=false&count_private=false&layout=compact" />
+  <img height="170" alt="Top languages" src="https://github-readme-stats.shion.dev/api/top-langs/?username=abyabyss&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact" />
+</picture>
 
 <br />
 
-<img alt="GitHub streak" src="https://streak-stats.demolab.com/?user=abyabyss&theme=dark&hide_border=false" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com/?user=abyabyss&theme=dark&hide_border=false" />
+  <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com/?user=abyabyss&theme=default&hide_border=false" />
+  <img alt="GitHub streak" src="https://streak-stats.demolab.com/?user=abyabyss&theme=dark&hide_border=false" />
+</picture>
 
 <br />
 
-<img alt="GitHub trophies" src="https://github-profile-trophy.vercel.app/?username=AbyAbyss&theme=darkhub&no-frame=true&no-bg=true&margin-w=4&column=7" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-trophy.vercel.app/?username=AbyAbyss&theme=darkhub&no-frame=true&no-bg=true&margin-w=4&column=7" />
+  <source media="(prefers-color-scheme: light)" srcset="https://github-profile-trophy.vercel.app/?username=AbyAbyss&theme=flat&no-frame=true&no-bg=true&margin-w=4&column=7" />
+  <img alt="GitHub trophies" src="https://github-profile-trophy.vercel.app/?username=AbyAbyss&theme=darkhub&no-frame=true&no-bg=true&margin-w=4&column=7" />
+</picture>
 
 </div>
 
----
+<img src="./assets/divider.svg" width="100%" alt="" />
 
 ## 🤝 Let's Connect
 
@@ -221,5 +233,8 @@ I'm open to **Senior Backend, Platform and AI Engineering roles in the UK**.
 <div align="center">
 
 <sub>⭐ From <a href="https://github.com/AbyAbyss">AbyAbyss</a> — building scalable, intelligent systems.</sub>
+
+
+<img src="./assets/footer.svg" width="100%" alt="" />
 
 </div>
