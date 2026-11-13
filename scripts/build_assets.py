@@ -310,63 +310,79 @@ def hero():
 
 # ---------------------------------------------------------------- zone banners
 def art_twilight():
+    """Two schools of fish cross the whole banner, passing behind the title."""
     fish = '<path d="M0 0C6-8 20-8 28 0C20 8 6 8 0 0Z M26 0L37-7L33 0L37 7Z"/>'
-    school = "".join(
-        f'<g transform="translate({x} {y}) scale({s})"><g class="fishy" style="animation-delay:-{i * .4}s">{fish}</g></g>'
-        for i, (x, y, s) in enumerate([(0, 0, 1), (48, -18, .8), (56, 16, .9), (104, -6, .7), (112, 26, .75),
-                                       (150, -26, .6), (168, 6, .65)])
-    )
-    css = (".school{animation:school 16s linear infinite}"
-           "@keyframes school{0%{transform:translate(900px,58px);opacity:0}12%{opacity:.75}80%{opacity:.75}"
-           "100%{transform:translate(430px,46px);opacity:0}}"
+    layout = [(0, 0, 1), (48, -18, .8), (56, 16, .9), (104, -6, .7), (112, 26, .75), (150, -26, .6), (168, 6, .65)]
+
+    def school(y, scale, dur, delay, opacity, members):
+        body = "".join(
+            f'<g transform="translate({x} {fy}) scale({s})"><g class="fishy" style="animation-delay:-{i * .4}s">{fish}</g></g>'
+            for i, (x, fy, s) in enumerate(members)
+        )
+        return (
+            f'<g class="school rm" style="--y:{y}px;animation-duration:{dur}s;animation-delay:-{delay}s" '
+            f'fill="var(--dim)" fill-opacity="{opacity}"><g transform="scale({scale})">{body}</g></g>'
+        )
+    css = (".school{animation:school linear infinite}"
+           "@keyframes school{from{transform:translate(900px,var(--y))}to{transform:translate(-260px,var(--y))}}"
            ".fishy{animation:fishy 1.6s ease-in-out infinite alternate}@keyframes fishy{to{transform:translateY(3px)}}")
-    return css, f'<g class="school rm" fill="var(--dim)">{school}</g>'
+    return css, school(52, 1, 24, 3, .7, layout) + school(88, .7, 33, 19, .45, layout[:5])
 
 
 def art_midnight():
-    def jelly(x, y, s, color, dur, delay):
+    """Jellyfish rise across the full width, some of them behind the depth gauge and title."""
+    def jelly(x, s, color, dur, delay, dx):
         tent = "".join(f'<path d="M{tx} 3q4 9 0 18q-4 9 0 18" />' for tx in (-10, -3.5, 3.5, 10))
         return (
-            f'<g transform="translate({x} {y}) scale({s})"><g class="drift" style="animation-duration:{dur}s;animation-delay:-{delay}s">'
+            f'<g class="drift rm" style="--x:{x}px;--dx:{dx}px;animation-duration:{dur}s;animation-delay:-{delay}s"><g transform="scale({s})">'
             f'<g class="tent fb" fill="none" stroke="{color}" stroke-opacity=".7" stroke-width="1.3" stroke-linecap="round">{tent}</g>'
             f'<path class="bell fb" d="M-16 2C-16-22 16-22 16 2Q12 7 8 2Q4 7 0 2Q-4 7-8 2Q-12 7-16 2Z" fill="{color}" '
             f'fill-opacity=".3" stroke="{color}" stroke-width="1.4"/>'
             f'<circle cx="0" cy="-8" r="3" fill="{color}"/></g></g>'
         )
     css = (".drift{animation:drift linear infinite}"
-           "@keyframes drift{0%{transform:translateY(70px);opacity:0}15%,80%{opacity:1}100%{transform:translateY(-90px);opacity:0}}"
+           "@keyframes drift{0%{transform:translate(var(--x),150px);opacity:0}12%,85%{opacity:1}"
+           "100%{transform:translate(calc(var(--x) + var(--dx)),-60px);opacity:0}}"
            ".bell{animation:bell 2.2s ease-in-out infinite}@keyframes bell{50%{transform:scale(.84,1.12)}}"
            ".tent{animation:tent 2.2s ease-in-out infinite}@keyframes tent{50%{transform:scale(.8,1.15)}}")
-    body = jelly(640, 64, 1.15, "var(--accent3)", 15, 3) + jelly(740, 70, .8, "var(--accent2)", 19, 11) + \
-        jelly(810, 60, 1, "var(--accent)", 17, 7)
+    body = (jelly(110, .9, "var(--accent2)", 21, 4, 40) + jelly(300, 1.1, "var(--accent3)", 17, 12, -50)
+            + jelly(470, .7, "var(--accent)", 24, 9, 30) + jelly(640, 1.15, "var(--accent3)", 16, 2, -40)
+            + jelly(760, .8, "var(--accent2)", 20, 15, 30) + jelly(830, 1, "var(--accent)", 18, 7, -60))
     return css, body
 
 
 def art_abyssal():
-    def chain(y, color, n, phase, r0):
-        return "".join(
-            f'<g class="bead" style="animation-delay:-{phase + i * .17:.2f}s">'
-            f'<circle cx="{560 + i * 19}" cy="{y}" r="{r0 * 2.6:.1f}" fill="{color}" fill-opacity=".14"/>'
-            f'<circle cx="{560 + i * 19}" cy="{y}" r="{r0:.1f}" fill="{color}"/></g>'
+    """Chains of lights swim the full width of the banner, undulating as they go."""
+    def chain(y, color, n, r0, dur, delay):
+        beads = "".join(
+            f'<g class="bead" style="animation-delay:-{i * .17:.2f}s">'
+            f'<circle cx="{i * 17}" cy="0" r="{r0 * (2.6 - i * .05):.1f}" fill="{color}" fill-opacity=".14"/>'
+            f'<circle cx="{i * 17}" cy="0" r="{r0 * (1 - i * .03):.1f}" fill="{color}"/></g>'
             for i in range(n)
         )
-    css = (".bead{animation:bead 3.2s ease-in-out infinite}"
-           "@keyframes bead{0%,100%{transform:translateY(-15px);opacity:.35}50%{transform:translateY(15px);opacity:1}}")
-    return css, chain(56, "var(--accent)", 16, 0, 2.6) + chain(66, "var(--accent3)", 16, 1.4, 1.8)
+        return f'<g class="swim rm" style="--y:{y}px;animation-duration:{dur}s;animation-delay:-{delay}s">{beads}</g>'
+    css = (".swim{animation:swim linear infinite}"
+           "@keyframes swim{from{transform:translate(900px,var(--y))}to{transform:translate(-340px,var(--y))}}"
+           ".bead{animation:bead 3.2s ease-in-out infinite}"
+           "@keyframes bead{0%,100%{transform:translateY(-13px);opacity:.4}50%{transform:translateY(13px);opacity:1}}")
+    return css, (chain(50, "var(--accent)", 18, 2.6, 19, 2) + chain(78, "var(--accent3)", 14, 1.9, 27, 15)
+                 + chain(30, "var(--accent2)", 10, 1.5, 34, 24))
 
 
 def art_hadal():
+    """Sonar pings expand across the whole banner and an echo runs along the seabed."""
     rings = "".join(
-        f'<circle class="ring fb" cx="770" cy="52" r="9" vector-effect="non-scaling-stroke" fill="none" stroke="var(--accent)" stroke-width="1.2" '
-        f'style="animation-delay:-{i * 1.2}s"/>' for i in range(3)
+        f'<circle class="ring fb" cx="770" cy="52" r="9" vector-effect="non-scaling-stroke" fill="none" stroke="var(--accent)" stroke-width="1.3" '
+        f'style="animation-delay:-{i * 2}s"/>' for i in range(3)
     )
-    bed = "M540 100L575 92L600 97L640 84L668 95L705 88L730 99L770 90L800 96L835 86L870 98"
-    css = (".ring{animation:ring 3.6s ease-out infinite}"
-           "@keyframes ring{from{transform:scale(1);opacity:.9}to{transform:scale(7);opacity:0}}"
-           ".echo{stroke-dasharray:40 400;animation:echo 3.6s linear infinite}@keyframes echo{from{stroke-dashoffset:440}to{stroke-dashoffset:0}}")
+    bed = ("M0 108L40 102L85 109L130 100L170 106L215 99L260 108L300 103L345 110L390 101L430 107L470 100L515 108"
+           "L560 102L600 107L640 98L668 106L705 101L730 109L770 102L800 107L835 99L880 108")
+    css = (".ring{animation:ring 6s cubic-bezier(.2,.6,.4,1) infinite}"
+           "@keyframes ring{from{transform:scale(1);opacity:.85}to{transform:scale(92);opacity:0}}"
+           ".echo{stroke-dasharray:60 900;animation:echo 6s linear infinite}@keyframes echo{from{stroke-dashoffset:0}to{stroke-dashoffset:960}}")
     body = (
-        f'<g class="rm">{rings}</g><circle cx="770" cy="52" r="3.4" fill="var(--accent)"/>'
-        f'<path d="{bed}" fill="none" stroke="var(--dim)" stroke-opacity=".45" stroke-width="1.3" stroke-linejoin="round"/>'
+        f'{rings}<circle cx="770" cy="52" r="3.4" fill="var(--accent)"/>'
+        f'<path d="{bed}" fill="none" stroke="var(--dim)" stroke-opacity=".4" stroke-width="1.3" stroke-linejoin="round"/>'
         f'<path class="echo rm" d="{bed}" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>'
     )
     return css, body
