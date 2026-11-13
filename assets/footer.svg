@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 70" width="880" height="70" role="presentation" preserveAspectRatio="none">
-<style>
-.w{animation:w linear infinite}
-@keyframes w{to{transform:translateX(440px)}}
-@media (prefers-reduced-motion:reduce){.w{animation:none}}
-</style>
-<defs><clipPath id="c"><rect width="880" height="70" rx="18"/></clipPath></defs>
-<g clip-path="url(#c)"><path class="w" d="M-440 22 Q-330.0 6 -220.0 22 T0 22 T220 22 T440 22 T660 22 T880 22 T1100 22 T1320 22 V70 H-440 Z" fill="#9d6bff" fill-opacity="0.22" style="animation-duration:19s;animation-direction:reverse"/><path class="w" d="M-440 32 Q-330.0 12 -220.0 32 T0 32 T220 32 T440 32 T660 32 T880 32 T1100 32 T1320 32 V70 H-440 Z" fill="#4cc9f0" fill-opacity="0.26" style="animation-duration:13s;animation-direction:normal"/><path class="w" d="M-440 44 Q-330.0 30 -220.0 44 T0 44 T220 44 T440 44 T660 44 T880 44 T1100 44 T1320 44 V70 H-440 Z" fill="#2ED3A7" fill-opacity="0.42" style="animation-duration:9s;animation-direction:reverse"/></g>
-</svg>
