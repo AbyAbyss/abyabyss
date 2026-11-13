@@ -126,13 +126,6 @@ high-performance backend systems and AI-powered products. Based in Walsall, Unit
   <img alt="GitHub streak" src="https://streak-stats.demolab.com/?user=abyabyss&theme=dark&hide_border=false" />
 </picture>
 
-<br />
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-trophy.vercel.app/?username=AbyAbyss&theme=darkhub&no-frame=true&no-bg=true&margin-w=4&column=7" />
-  <source media="(prefers-color-scheme: light)" srcset="https://github-profile-trophy.vercel.app/?username=AbyAbyss&theme=flat&no-frame=true&no-bg=true&margin-w=4&column=7" />
-  <img alt="GitHub trophies" src="https://github-profile-trophy.vercel.app/?username=AbyAbyss&theme=darkhub&no-frame=true&no-bg=true&margin-w=4&column=7" />
-</picture>
 
 </div>
 
