@@ -1,8 +1,6 @@
 <div align="center">
 
-<a href="https://abyabyss.github.io"><img src="./assets/hero.svg" width="100%" alt="Aby Saji Pappachan. Technical Lead, Backend and AI Engineer. Open to Backend, AI and Platform roles. Walsall, United Kingdom." /></a>
-
-<br /><br />
+<a href="https://abyabyss.github.io"><img src="./assets/hero.svg" width="100%" alt="Aby Saji Pappachan. Technical Lead, Backend and AI Engineer. Open to Backend, AI and Platform roles. Walsall, United Kingdom." /></a><img src="./assets/bleed/out-1.svg" width="100%" alt="" />
 
 <a href="https://abyabyss.github.io"><img src="./assets/buttons/portfolio.svg" height="52" alt="Portfolio: abyabyss.github.io" /></a>
 <a href="https://www.linkedin.com/in/aby-saji"><img src="./assets/buttons/linkedin.svg" height="52" alt="LinkedIn: aby-saji" /></a>
@@ -10,9 +8,7 @@
 
 </div>
 
-<br />
-
-<img src="./assets/zone-about.svg" width="100%" alt="About (200 m, twilight zone)" />
+<img src="./assets/bleed/in-1.svg" width="100%" alt="" /><img src="./assets/zone-about.svg" width="100%" alt="About (200 m, twilight zone)" /><img src="./assets/bleed/out-2.svg" width="100%" alt="" />
 
 I'm a **Technical Lead** with **8 years** of experience delivering scalable SaaS platforms,
 high-performance backend systems and AI-powered products. Based in Walsall, United Kingdom.
@@ -26,9 +22,7 @@ high-performance backend systems and AI-powered products. Based in Walsall, Unit
 
 <img src="./assets/architecture.svg" width="100%" alt="AI platform: an agent runtime connected to models, memory and RAG, subagents, MCP servers, tools and APIs, and approvals. Data platform: Airbyte to DuckDB to Apache Airflow." />
 
-<br />
-
-<img src="./assets/zone-stack.svg" width="100%" alt="Stack (1,000 m, midnight zone)" />
+<img src="./assets/bleed/in-2.svg" width="100%" alt="" /><img src="./assets/zone-stack.svg" width="100%" alt="Stack (1,000 m, midnight zone)" /><img src="./assets/bleed/out-3.svg" width="100%" alt="" />
 
 **Backend &amp; APIs**
 
@@ -42,9 +36,7 @@ high-performance backend systems and AI-powered products. Based in Walsall, Unit
 
 <img src="./assets/chips/aws.svg" height="30" alt="AWS" /> <img src="./assets/chips/docker.svg" height="30" alt="Docker" /> <img src="./assets/chips/postgresql.svg" height="30" alt="PostgreSQL" /> <img src="./assets/chips/mongodb.svg" height="30" alt="MongoDB" /> <img src="./assets/chips/redis.svg" height="30" alt="Redis" /> <img src="./assets/chips/rust.svg" height="30" alt="Rust" />
 
-<br />
-
-<img src="./assets/zone-projects.svg" width="100%" alt="Projects (4,000 m, abyssal zone)" />
+<img src="./assets/bleed/in-3.svg" width="100%" alt="" /><img src="./assets/zone-projects.svg" width="100%" alt="Projects (4,000 m, abyssal zone)" /><img src="./assets/bleed/out-4.svg" width="100%" alt="" />
 
 <table>
   <tr>
@@ -107,9 +99,7 @@ high-performance backend systems and AI-powered products. Based in Walsall, Unit
   </tr>
 </table>
 
-<br />
-
-<img src="./assets/zone-activity.svg" width="100%" alt="Activity (6,000 m, hadal zone)" />
+<img src="./assets/bleed/in-4.svg" width="100%" alt="" /><img src="./assets/zone-activity.svg" width="100%" alt="Activity (6,000 m, hadal zone)" /><img src="./assets/bleed/out-5.svg" width="100%" alt="" />
 
 <div align="center">
 
@@ -136,21 +126,12 @@ high-performance backend systems and AI-powered products. Based in Walsall, Unit
   <img alt="GitHub streak" src="https://streak-stats.demolab.com/?user=abyabyss&theme=dark&hide_border=false" />
 </picture>
 
-<br />
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-trophy.vercel.app/?username=AbyAbyss&theme=darkhub&no-frame=true&no-bg=true&margin-w=4&column=7" />
-  <source media="(prefers-color-scheme: light)" srcset="https://github-profile-trophy.vercel.app/?username=AbyAbyss&theme=flat&no-frame=true&no-bg=true&margin-w=4&column=7" />
-  <img alt="GitHub trophies" src="https://github-profile-trophy.vercel.app/?username=AbyAbyss&theme=darkhub&no-frame=true&no-bg=true&margin-w=4&column=7" />
-</picture>
 
 </div>
 
-<br />
-
 <div align="center">
 
-<a href="https://abyabyss.github.io"><img src="./assets/seabed.svg" width="100%" alt="You've reached the bottom. The rest of the work is at abyabyss.github.io" /></a>
+<img src="./assets/bleed/in-5.svg" width="100%" alt="" /><a href="https://abyabyss.github.io"><img src="./assets/seabed.svg" width="100%" alt="You've reached the bottom. The rest of the work is at abyabyss.github.io" /></a>
 
 <br /><br />
 
