@@ -587,6 +587,30 @@ def seabed():
     return svg(W, H, "You've reached the bottom. The rest of the work is at abyabyss.github.io", css, water_defs(W, H), body)
 
 
+# ---------------------------------------------------------------- bleed strips
+def bleed(direction, seed):
+    """Transparent strip that sits against a card so its particles appear to
+    leave the card (out) or gather into the next one (in), fading toward the
+    README text. Mid-tone colours, so it reads on light and dark pages."""
+    W, H = 880, 46
+    rnd = random.Random(seed)
+    dots = ""
+    for _ in range(30):
+        dur = rnd.uniform(6, 13)
+        dots += (
+            f'<circle class="d" cx="{rnd.uniform(14, W - 14):.0f}" cy="-4" r="{rnd.uniform(.9, 2.5):.1f}" '
+            f'fill="{rnd.choice(["#17b890", "#17b890", "#2aa7d6", "#8a63e8"])}" '
+            f'style="--dx:{rnd.uniform(-22, 22):.0f}px;animation-duration:{dur:.1f}s;animation-delay:-{rnd.uniform(0, dur):.1f}s"/>'
+        )
+    a, b = (1, 0) if direction == "out" else (0, 1)
+    css = (f".d{{animation:d linear infinite}}@keyframes d{{to{{transform:translate(var(--dx),{H + 8}px)}}}}"
+           "@media (prefers-reduced-motion:reduce){.d{animation:none;transform:translateY(20px)}}")
+    defs = (f'<linearGradient id="f" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="{a}"/>'
+            f'<stop offset="1" stop-color="#fff" stop-opacity="{b}"/></linearGradient>'
+            f'<mask id="m" maskUnits="userSpaceOnUse" x="0" y="0" width="{W}" height="{H}"><rect width="{W}" height="{H}" fill="url(#f)"/></mask>')
+    return svg(W, H, "", css, defs, f'<g mask="url(#m)">{dots}</g>', decorative=True)
+
+
 # ---------------------------------------------------------------- build
 if __name__ == "__main__":
     files = {
@@ -598,6 +622,9 @@ if __name__ == "__main__":
         "architecture.svg": architecture(),
         "seabed.svg": seabed(),
     }
+    for i in range(1, 6):
+        files[f"bleed/out-{i}.svg"] = bleed("out", 40 + i)
+        files[f"bleed/in-{i}.svg"] = bleed("in", 50 + i)
     for i, (slug, label, color) in enumerate(STACK):
         files[f"chips/{slug}.svg"] = chip(label, color, i)
     for i, (slug, label, sub) in enumerate(BUTTONS):
