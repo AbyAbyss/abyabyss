@@ -1,6 +1,6 @@
 <div align="center">
 
-<a href="https://abyabyss.github.io"><img src="./assets/hero.svg" width="100%" alt="Aby Saji Pappachan. Technical Lead, Backend and AI Engineer. Open to Backend, AI and Platform roles. Walsall, United Kingdom." /></a><img src="./assets/bleed/out-1.svg" width="100%" alt="" />
+<a href="https://abyabyss.github.io"><img src="./assets/hero.svg" width="100%" alt="Aby Saji Pappachan. Technical Lead, Backend and AI Engineer. Open to Tech Lead and Architect roles in the UK. Walsall, United Kingdom." /></a><img src="./assets/bleed/out-1.svg" width="100%" alt="" />
 
 <a href="https://abyabyss.github.io"><img src="./assets/buttons/portfolio.svg" height="52" alt="Portfolio: abyabyss.github.io" /></a>
 <a href="https://www.linkedin.com/in/aby-saji"><img src="./assets/buttons/linkedin.svg" height="52" alt="LinkedIn: aby-saji" /></a>
@@ -135,7 +135,7 @@ high-performance backend systems and AI-powered products. Based in Walsall, Unit
 
 <br /><br />
 
-I'm open to **Senior Backend, Platform and AI Engineering roles in the UK**.
+I'm open to **Tech Lead and Architect roles in the UK**.
 
 <a href="https://abyabyss.github.io"><img src="./assets/buttons/portfolio.svg" height="52" alt="Portfolio: abyabyss.github.io" /></a>
 <a href="https://www.linkedin.com/in/aby-saji"><img src="./assets/buttons/linkedin.svg" height="52" alt="LinkedIn: aby-saji" /></a>
