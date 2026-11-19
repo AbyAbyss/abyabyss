@@ -1,38 +1,221 @@
-## Hi, I'm Aby Saji Pappachan
+<div align="center">
 
-Technical Lead and Backend & AI Engineer based in Walsall, UK. I'm open to **Tech Lead and Architect roles in the UK**.
+# Hi, I'm Aby Saji Pappachan 👋
 
-[Portfolio](https://abyabyss.github.io) · [LinkedIn](https://www.linkedin.com/in/aby-saji) · [Email](mailto:abyrocksaji@gmail.com)
+### Technical Lead · Backend &amp; AI Engineer
 
-### About
+[![Open to Work](https://img.shields.io/badge/🟢_OPEN_TO_WORK-2ED3A7?style=for-the-badge&labelColor=111A21)](mailto:abyrocksaji@gmail.com)
 
-I have 8 years of experience delivering SaaS platforms, high-performance backend systems and AI-powered products. Right now I lead backend, platform, data and AI work.
+[![Typing SVG](https://readme-typing-svg.demolab.com/?font=Inter&weight=600&size=22&duration=3200&pause=800&color=2ED3A7&center=true&vCenter=true&width=640&lines=Building+scalable+backend+systems;Designing+AI+agents+%26+LLM+platforms;MCP+%7C+Generative+AI+%7C+Distributed+Systems;8+years+across+Node.js+%7C+Python+%7C+Golang)](https://abyabyss.github.io)
 
-- Design LLM agents and MCP (Model Context Protocol) client/server platforms, and ship generative AI to production
-- Build distributed systems, secure event-driven architectures and clean, scalable APIs
-- Architect data and analytics platforms with Airbyte, DuckDB and Apache Airflow
-- Background in Zero Trust security, gateways and cross-platform desktop apps
+📍 Walsall, United Kingdom &nbsp; · &nbsp; 🟢 Open to Tech Lead and Architect roles in the UK
 
-### Stack
+[![Portfolio](https://img.shields.io/badge/Portfolio-abyabyss.github.io-2ED3A7?style=for-the-badge&logo=firefoxbrowser&logoColor=08140F)](https://abyabyss.github.io)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-aby--saji-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aby-saji)
+[![Email](https://img.shields.io/badge/Email-abysaji-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:abyrocksaji@gmail.com)
+[![Profile views](https://komarev.com/ghpvc/?username=AbyAbyss&label=Profile%20views&color=2ED3A7&style=for-the-badge)](https://github.com/AbyAbyss)
 
-| Area | Tools |
-| --- | --- |
-| Backend & APIs | Node.js, TypeScript, NestJS, Python, Go, GraphQL |
-| AI & Data | LLMs, LangChain, MCP, DuckDB, Airbyte, Apache Airflow |
-| Cloud & Databases | AWS, Docker, PostgreSQL, MongoDB, Redis, Rust |
+</div>
 
-### Projects
+---
 
-**[AgentKit](https://abyabyss.github.io/agentkit/)**: a headless TypeScript agent runtime you drop into any project. One `createAgent()` config wires up any model, your APIs and functions as tools, MCP, skills, memory, RAG, subagents and approvals. Every part is a replaceable plugin, and a control plane gives each tenant traces, workflow graphs and approvals. [Tour](https://abyabyss.github.io/agentkit/#tour) · [Docs](https://abyabyss.github.io/agentkit/doc/docs/getting-started/) · source opening soon.
+## 🚀 About Me
 
-| Project | What it is | Built with |
-| --- | --- | --- |
-| [Helpy](https://github.com/AbyAbyss/helpy) | AI companion that sits next to your cursor, points at answers on screen and runs background agents that ask before anything risky | Tauri, Rust, React |
-| [term-rest-client](https://github.com/AbyAbyss/cli-rest-client) | API client for the terminal or browser: REST, GraphQL, streams, WebSockets and load testing in one Go binary | Go |
-| [InkTerm](https://github.com/AbyAbyss/InkTerm) | Themeable terminal with a built-in AI agent and MCP support | TypeScript |
-| [dockman](https://github.com/AbyAbyss/dockman) | Desktop app for managing Docker containers, images, volumes, networks and builds | Tauri, TypeScript, Rust |
-| [sandkit](https://github.com/AbyAbyss/sandkit) | SDK for embedding runnable multi-language code playgrounds (Piston, Pyodide, QuickJS) | TypeScript, Hono |
-| [redis_gui](https://github.com/AbyAbyss/redis_gui) | Graphical Redis client with a keyspace browser, CLI, workbench and live metrics | TypeScript |
-| [Yankit](https://github.com/AbyAbyss/Yankit) | Keyboard-driven macOS clipboard manager for stashing and recalling snippets | Swift, SwiftUI |
+I'm a **Technical Lead** with **8 years** of experience delivering scalable SaaS platforms,
+high-performance backend systems and AI-powered products.
 
-More at [abyabyss.github.io](https://abyabyss.github.io), including a 3D view of all the projects.
+- 🧠 I design **LLM agents** and **MCP (Model Context Protocol)** client/server platforms, and bring **generative AI** into production
+- ⚙️ I build **distributed systems**, secure event-driven architectures and clean, scalable APIs
+- 📊 I architect **data & analytics platforms**: `Airbyte → DuckDB → Apache Airflow`
+- 🔐 Background in **Zero Trust security**, gateways and cross-platform desktop apps
+- 🏗️ Currently leading **backend, platform, data & AI** initiatives
+- 💬 Ask me about backend architecture, AI engineering, MCP, or building things that scale
+
+---
+
+## 🏅 GitHub Achievements
+
+<div align="center">
+
+![Pull Shark](https://img.shields.io/badge/Pull_Shark-×4-1F6FEB?style=for-the-badge&logo=github&logoColor=white&labelColor=111A21)
+![Pair Extraordinaire](https://img.shields.io/badge/Pair_Extraordinaire-×4-2ED3A7?style=for-the-badge&logo=github&logoColor=white&labelColor=111A21)
+![Quickdraw](https://img.shields.io/badge/Quickdraw-Unlocked-F0A500?style=for-the-badge&logo=github&logoColor=white&labelColor=111A21)
+![YOLO](https://img.shields.io/badge/YOLO-Unlocked-9D6BFF?style=for-the-badge&logo=github&logoColor=white&labelColor=111A21)
+![Arctic Code Vault](https://img.shields.io/badge/Arctic_Code_Vault-Contributor-7FB7C9?style=for-the-badge&logo=github&logoColor=white&labelColor=111A21)
+
+</div>
+
+---
+
+## 🛠️ Tech Stack
+
+**Backend &amp; APIs**
+
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![NestJS](https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Go](https://img.shields.io/badge/Golang-00ADD8?style=for-the-badge&logo=go&logoColor=white)
+![GraphQL](https://img.shields.io/badge/GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white)
+
+**AI, LLMs &amp; Data**
+
+![LLMs](https://img.shields.io/badge/LLMs-2ED3A7?style=for-the-badge&logoColor=white)
+![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white)
+![MCP](https://img.shields.io/badge/MCP-6E56CF?style=for-the-badge&logoColor=white)
+![DuckDB](https://img.shields.io/badge/DuckDB-FFF000?style=for-the-badge&logo=duckdb&logoColor=black)
+![Airbyte](https://img.shields.io/badge/Airbyte-615EFF?style=for-the-badge&logo=airbyte&logoColor=white)
+![Airflow](https://img.shields.io/badge/Apache%20Airflow-017CEE?style=for-the-badge&logo=apacheairflow&logoColor=white)
+
+**Cloud, Infra &amp; Databases**
+
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonwebservices&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
+![Rust](https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white)
+
+---
+
+## 🌟 Featured Projects
+
+<table>
+  <tr>
+    <td colspan="2" valign="top">
+      <h3>🤖&nbsp; <a href="https://abyabyss.github.io/agentkit/">AgentKit</a></h3>
+      <p>A headless TypeScript agent runtime you drop into any project. One <code>createAgent()</code> config wires any model, your APIs and functions as tools, MCP, skills, memory, RAG, subagents and approvals. A plugin kernel where every part is replaceable. Workflows you declare or the model generates. A control plane for every tenant with traces, workflow graphs and approvals.</p>
+      <p>
+        <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+        <img src="https://img.shields.io/badge/MCP-6E56CF?style=flat-square" alt="MCP" />
+        <img src="https://img.shields.io/badge/AI%20Agents-2ED3A7?style=flat-square&labelColor=111A21" alt="AI Agents" />
+        <img src="https://img.shields.io/badge/Zod-3E67B1?style=flat-square&logo=zod&logoColor=white" alt="Zod" />
+        <img src="https://img.shields.io/badge/Turborepo-EF4444?style=flat-square&logo=turborepo&logoColor=white" alt="Turborepo" />
+      </p>
+      <p>
+        <a href="https://abyabyss.github.io/agentkit/#tour"><img src="https://img.shields.io/badge/▶%20Watch%20the%20tour%20with%20sound-2ED3A7?style=flat-square&labelColor=111A21" alt="Watch the tour with sound" /></a>
+        <a href="https://abyabyss.github.io/agentkit/doc/docs/getting-started/"><img src="https://img.shields.io/badge/Docs-111A21?style=flat-square" alt="Docs" /></a>
+        <img src="https://img.shields.io/badge/Source%20private%20%C2%B7%20open%20source%20soon-111A21?style=flat-square&logo=github" alt="Source currently private, open source soon" />
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>👆&nbsp; <a href="https://abyabyss.github.io/helpy/">Helpy</a></h3>
+      <p>An AI companion that lives next to your cursor. Ask out loud and it points at the answer on your screen, walks you through step by step, and runs background agents that ask before anything risky.</p>
+      <p>
+        <img src="https://img.shields.io/badge/Tauri-24C8D8?style=flat-square&logo=tauri&logoColor=white" alt="Tauri" />
+        <img src="https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />
+        <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React" />
+      </p>
+      <p>
+        <a href="https://github.com/AbyAbyss/helpy"><img src="https://img.shields.io/badge/Open%20source-2ED3A7?style=flat-square&logo=github&labelColor=111A21" alt="Open source on GitHub" /></a>
+      </p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>📋&nbsp; <a href="https://github.com/AbyAbyss/Yankit">Yankit</a></h3>
+      <p>A native macOS clipboard companion for yanking, stashing and recalling snippets. Fast and keyboard-driven.</p>
+      <p>
+        <img src="https://img.shields.io/badge/Swift-F05138?style=flat-square&logo=swift&logoColor=white" alt="Swift" />
+        <img src="https://img.shields.io/badge/SwiftUI-0071E3?style=flat-square&logo=swift&logoColor=white" alt="SwiftUI" />
+        <img src="https://img.shields.io/badge/macOS-111A21?style=flat-square&logo=apple&logoColor=white" alt="macOS" />
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🐳&nbsp; <a href="https://github.com/AbyAbyss/dockman">dockman</a></h3>
+      <p>A fast Docker management desktop app. Manage containers, images, volumes, networks and builds from one native window.</p>
+      <p>
+        <img src="https://img.shields.io/badge/Tauri-24C8D8?style=flat-square&logo=tauri&logoColor=white" alt="Tauri" />
+        <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+        <img src="https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />
+      </p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>🧩&nbsp; <a href="https://github.com/AbyAbyss/sandkit">sandkit</a></h3>
+      <p>An open-source SDK for embedding multi-language, runnable code playgrounds, powered by Piston, Pyodide and QuickJS.</p>
+      <p>
+        <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+        <img src="https://img.shields.io/badge/Hono-E36002?style=flat-square&logo=hono&logoColor=white" alt="Hono" />
+        <img src="https://img.shields.io/badge/Turborepo-EF4444?style=flat-square&logo=turborepo&logoColor=white" alt="Turborepo" />
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🗄️&nbsp; <a href="https://github.com/AbyAbyss/redis_gui">redis_gui</a></h3>
+      <p>A graphical Redis client. Browse the keyspace, run commands in a CLI and workbench, and watch live memory and metrics.</p>
+      <p>
+        <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+        <img src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white" alt="Redis" />
+        <img src="https://img.shields.io/badge/Webview-2ED3A7?style=flat-square&labelColor=111A21" alt="Webview" />
+      </p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>⚡&nbsp; <a href="https://abyabyss.github.io/term-rest-client.html">term-rest-client</a></h3>
+      <p>An open-source API client for the terminal or the browser, run as <code>rest</code>. REST, GraphQL, streams, WebSockets and load testing, with collections, environments and tests, in one Go binary.</p>
+      <p>
+        <img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Go" />
+        <img src="https://img.shields.io/badge/Terminal%20UI-111A21?style=flat-square&logo=gnometerminal&logoColor=white" alt="Terminal UI" />
+        <img src="https://img.shields.io/badge/GraphQL-E10098?style=flat-square&logo=graphql&logoColor=white" alt="GraphQL" />
+        <img src="https://img.shields.io/badge/Load%20testing-2ED3A7?style=flat-square&labelColor=111A21" alt="Load testing" />
+      </p>
+      <p>
+        <a href="https://github.com/AbyAbyss/cli-rest-client"><img src="https://img.shields.io/badge/Open%20source-2ED3A7?style=flat-square&logo=github&labelColor=111A21" alt="Open source on GitHub" /></a>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>⌨️&nbsp; <a href="https://github.com/AbyAbyss/InkTerm">InkTerm</a></h3>
+      <p>A modern, themeable terminal with a built-in <b>AI agent</b> and <b>MCP</b> (Model Context Protocol) support. LLM-powered help, right in the command line.</p>
+      <p>
+        <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+        <img src="https://img.shields.io/badge/AI%20Agent-2ED3A7?style=flat-square&labelColor=111A21" alt="AI Agent" />
+        <img src="https://img.shields.io/badge/MCP-6E56CF?style=flat-square" alt="MCP" />
+      </p>
+    </td>
+    <td width="50%" valign="top"></td>
+  </tr>
+  <tr>
+    <td colspan="2" valign="top" align="center">
+      <h3>🚀&nbsp; Explore in 3D</h3>
+      <p>See every project as an interactive 3D star system. Fly a ship between the planets and dock to open each one.</p>
+      <p>
+        <a href="https://abyabyss.github.io/"><img src="https://img.shields.io/badge/Launch%20abyabyss.github.io-2ED3A7?style=flat-square&labelColor=111A21" alt="Launch portfolio" /></a>
+      </p>
+    </td>
+  </tr>
+</table>
+
+---
+
+## 📊 GitHub Stats
+
+<div align="center">
+
+<img height="170" alt="Aby's GitHub stats" src="https://github-readme-stats.shion.dev/api?username=abyabyss&theme=dark&hide_border=false&include_all_commits=false&count_private=false" />
+<img height="170" alt="Top languages" src="https://github-readme-stats.shion.dev/api/top-langs/?username=abyabyss&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact" />
+
+<br />
+
+<img alt="GitHub streak" src="https://streak-stats.demolab.com/?user=abyabyss&theme=dark&hide_border=false" />
+
+</div>
+
+---
+
+## 🤝 Let's Connect
+
+I'm open to **Tech Lead and Architect roles in the UK**.
+
+🌐 **Portfolio**: [abyabyss.github.io](https://abyabyss.github.io) &nbsp; | &nbsp;
+💼 **LinkedIn**: [aby-saji](https://www.linkedin.com/in/aby-saji) &nbsp; | &nbsp;
+✉️ **Email**: [abyrocksaji@gmail.com](mailto:abyrocksaji@gmail.com)
+
+<div align="center">
+
+<sub>⭐ From <a href="https://github.com/AbyAbyss">AbyAbyss</a>, building scalable, intelligent systems.</sub>
+
+</div>
