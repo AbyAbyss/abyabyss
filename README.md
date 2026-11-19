@@ -1,17 +1,28 @@
 <div align="center">
 
-<a href="https://abyabyss.github.io"><img src="./assets/hero.svg" width="100%" alt="Aby Saji Pappachan. Technical Lead, Backend and AI Engineer. Open to Tech Lead and Architect roles in the UK. Walsall, United Kingdom." /></a><img src="./assets/bleed/out-1.svg" width="100%" alt="" />
+# Hi, I'm Aby Saji Pappachan 👋
 
-<a href="https://abyabyss.github.io"><img src="./assets/buttons/portfolio.svg" height="52" alt="Portfolio: abyabyss.github.io" /></a>
-<a href="https://www.linkedin.com/in/aby-saji"><img src="./assets/buttons/linkedin.svg" height="52" alt="LinkedIn: aby-saji" /></a>
-<a href="mailto:abyrocksaji@gmail.com"><img src="./assets/buttons/email.svg" height="52" alt="Email: abyrocksaji@gmail.com" /></a>
+### Technical Lead · Backend &amp; AI Engineer
+
+[![Open to Work](https://img.shields.io/badge/🟢_OPEN_TO_WORK-2ED3A7?style=for-the-badge&labelColor=111A21)](mailto:abyrocksaji@gmail.com)
+
+[![Typing SVG](https://readme-typing-svg.demolab.com/?font=Inter&weight=600&size=22&duration=3200&pause=800&color=2ED3A7&center=true&vCenter=true&width=640&lines=Building+scalable+backend+systems;Designing+AI+agents+%26+LLM+platforms;MCP+%7C+Generative+AI+%7C+Distributed+Systems;8+years+across+Node.js+%7C+Python+%7C+Golang)](https://abyabyss.github.io)
+
+📍 Walsall, United Kingdom &nbsp; · &nbsp; 🟢 Open to Tech Lead and Architect roles in the UK
+
+[![Portfolio](https://img.shields.io/badge/Portfolio-abyabyss.github.io-2ED3A7?style=for-the-badge&logo=firefoxbrowser&logoColor=08140F)](https://abyabyss.github.io)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-aby--saji-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aby-saji)
+[![Email](https://img.shields.io/badge/Email-abysaji-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:abyrocksaji@gmail.com)
+[![Profile views](https://komarev.com/ghpvc/?username=AbyAbyss&label=Profile%20views&color=2ED3A7&style=for-the-badge)](https://github.com/AbyAbyss)
 
 </div>
 
-<img src="./assets/bleed/in-1.svg" width="100%" alt="" /><img src="./assets/zone-about.svg" width="100%" alt="About (200 m, twilight zone)" /><img src="./assets/bleed/out-2.svg" width="100%" alt="" />
+---
+
+## 🚀 About Me
 
 I'm a **Technical Lead** with **8 years** of experience delivering scalable SaaS platforms,
-high-performance backend systems and AI-powered products. Based in Walsall, United Kingdom.
+high-performance backend systems and AI-powered products.
 
 - 🧠 I design **LLM agents** and **MCP (Model Context Protocol)** client/server platforms, and bring **generative AI** into production
 - ⚙️ I build **distributed systems**, secure event-driven architectures and clean, scalable APIs
@@ -20,129 +31,191 @@ high-performance backend systems and AI-powered products. Based in Walsall, Unit
 - 🏗️ Currently leading **backend, platform, data & AI** initiatives
 - 💬 Ask me about backend architecture, AI engineering, MCP, or building things that scale
 
-<img src="./assets/architecture.svg" width="100%" alt="AI platform: an agent runtime connected to models, memory and RAG, subagents, MCP servers, tools and APIs, and approvals. Data platform: Airbyte to DuckDB to Apache Airflow." />
+---
 
-<img src="./assets/bleed/in-2.svg" width="100%" alt="" /><img src="./assets/zone-stack.svg" width="100%" alt="Stack (1,000 m, midnight zone)" /><img src="./assets/bleed/out-3.svg" width="100%" alt="" />
+## 🏅 GitHub Achievements
+
+<div align="center">
+
+![Pull Shark](https://img.shields.io/badge/Pull_Shark-×4-1F6FEB?style=for-the-badge&logo=github&logoColor=white&labelColor=111A21)
+![Pair Extraordinaire](https://img.shields.io/badge/Pair_Extraordinaire-×4-2ED3A7?style=for-the-badge&logo=github&logoColor=white&labelColor=111A21)
+![Quickdraw](https://img.shields.io/badge/Quickdraw-Unlocked-F0A500?style=for-the-badge&logo=github&logoColor=white&labelColor=111A21)
+![YOLO](https://img.shields.io/badge/YOLO-Unlocked-9D6BFF?style=for-the-badge&logo=github&logoColor=white&labelColor=111A21)
+![Arctic Code Vault](https://img.shields.io/badge/Arctic_Code_Vault-Contributor-7FB7C9?style=for-the-badge&logo=github&logoColor=white&labelColor=111A21)
+
+</div>
+
+---
+
+## 🛠️ Tech Stack
 
 **Backend &amp; APIs**
 
-<img src="./assets/chips/nodejs.svg" height="30" alt="Node.js" /> <img src="./assets/chips/typescript.svg" height="30" alt="TypeScript" /> <img src="./assets/chips/nestjs.svg" height="30" alt="NestJS" /> <img src="./assets/chips/python.svg" height="30" alt="Python" /> <img src="./assets/chips/go.svg" height="30" alt="Golang" /> <img src="./assets/chips/graphql.svg" height="30" alt="GraphQL" />
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![NestJS](https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Go](https://img.shields.io/badge/Golang-00ADD8?style=for-the-badge&logo=go&logoColor=white)
+![GraphQL](https://img.shields.io/badge/GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white)
 
 **AI, LLMs &amp; Data**
 
-<img src="./assets/chips/llms.svg" height="30" alt="LLMs" /> <img src="./assets/chips/langchain.svg" height="30" alt="LangChain" /> <img src="./assets/chips/mcp.svg" height="30" alt="MCP" /> <img src="./assets/chips/duckdb.svg" height="30" alt="DuckDB" /> <img src="./assets/chips/airbyte.svg" height="30" alt="Airbyte" /> <img src="./assets/chips/airflow.svg" height="30" alt="Apache Airflow" />
+![LLMs](https://img.shields.io/badge/LLMs-2ED3A7?style=for-the-badge&logoColor=white)
+![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white)
+![MCP](https://img.shields.io/badge/MCP-6E56CF?style=for-the-badge&logoColor=white)
+![DuckDB](https://img.shields.io/badge/DuckDB-FFF000?style=for-the-badge&logo=duckdb&logoColor=black)
+![Airbyte](https://img.shields.io/badge/Airbyte-615EFF?style=for-the-badge&logo=airbyte&logoColor=white)
+![Airflow](https://img.shields.io/badge/Apache%20Airflow-017CEE?style=for-the-badge&logo=apacheairflow&logoColor=white)
 
 **Cloud, Infra &amp; Databases**
 
-<img src="./assets/chips/aws.svg" height="30" alt="AWS" /> <img src="./assets/chips/docker.svg" height="30" alt="Docker" /> <img src="./assets/chips/postgresql.svg" height="30" alt="PostgreSQL" /> <img src="./assets/chips/mongodb.svg" height="30" alt="MongoDB" /> <img src="./assets/chips/redis.svg" height="30" alt="Redis" /> <img src="./assets/chips/rust.svg" height="30" alt="Rust" />
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonwebservices&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
+![Rust](https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white)
 
-<img src="./assets/bleed/in-3.svg" width="100%" alt="" /><img src="./assets/zone-projects.svg" width="100%" alt="Projects (4,000 m, abyssal zone)" /><img src="./assets/bleed/out-4.svg" width="100%" alt="" />
+---
+
+## 🌟 Featured Projects
 
 <table>
   <tr>
     <td colspan="2" valign="top">
       <h3>🤖&nbsp; <a href="https://abyabyss.github.io/agentkit/">AgentKit</a></h3>
       <p>A headless TypeScript agent runtime you drop into any project. One <code>createAgent()</code> config wires any model, your APIs and functions as tools, MCP, skills, memory, RAG, subagents and approvals. A plugin kernel where every part is replaceable. Workflows you declare or the model generates. A control plane for every tenant with traces, workflow graphs and approvals.</p>
-      <p><code>TypeScript</code> <code>MCP</code> <code>AI Agents</code> <code>Zod</code> <code>Turborepo</code></p>
-      <p><a href="https://abyabyss.github.io/agentkit/#tour"><b>▶ Watch the tour with sound</b></a> &nbsp;·&nbsp; <a href="https://abyabyss.github.io/agentkit/doc/docs/getting-started/">Docs</a> &nbsp;·&nbsp; <sub>Source private, open source soon</sub></p>
+      <p>
+        <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+        <img src="https://img.shields.io/badge/MCP-6E56CF?style=flat-square" alt="MCP" />
+        <img src="https://img.shields.io/badge/AI%20Agents-2ED3A7?style=flat-square&labelColor=111A21" alt="AI Agents" />
+        <img src="https://img.shields.io/badge/Zod-3E67B1?style=flat-square&logo=zod&logoColor=white" alt="Zod" />
+        <img src="https://img.shields.io/badge/Turborepo-EF4444?style=flat-square&logo=turborepo&logoColor=white" alt="Turborepo" />
+      </p>
+      <p>
+        <a href="https://abyabyss.github.io/agentkit/#tour"><img src="https://img.shields.io/badge/▶%20Watch%20the%20tour%20with%20sound-2ED3A7?style=flat-square&labelColor=111A21" alt="Watch the tour with sound" /></a>
+        <a href="https://abyabyss.github.io/agentkit/doc/docs/getting-started/"><img src="https://img.shields.io/badge/Docs-111A21?style=flat-square" alt="Docs" /></a>
+        <img src="https://img.shields.io/badge/Source%20private%20%C2%B7%20open%20source%20soon-111A21?style=flat-square&logo=github" alt="Source currently private, open source soon" />
+      </p>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
       <h3>👆&nbsp; <a href="https://abyabyss.github.io/helpy/">Helpy</a></h3>
       <p>An AI companion that lives next to your cursor. Ask out loud and it points at the answer on your screen, walks you through step by step, and runs background agents that ask before anything risky.</p>
-      <p><code>Tauri</code> <code>Rust</code> <code>React</code></p>
-      <p><a href="https://github.com/AbyAbyss/helpy">Open source on GitHub</a></p>
+      <p>
+        <img src="https://img.shields.io/badge/Tauri-24C8D8?style=flat-square&logo=tauri&logoColor=white" alt="Tauri" />
+        <img src="https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />
+        <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React" />
+      </p>
+      <p>
+        <a href="https://github.com/AbyAbyss/helpy"><img src="https://img.shields.io/badge/Open%20source-2ED3A7?style=flat-square&logo=github&labelColor=111A21" alt="Open source on GitHub" /></a>
+      </p>
     </td>
     <td width="50%" valign="top">
       <h3>📋&nbsp; <a href="https://github.com/AbyAbyss/Yankit">Yankit</a></h3>
       <p>A native macOS clipboard companion for yanking, stashing and recalling snippets. Fast and keyboard-driven.</p>
-      <p><code>Swift</code> <code>SwiftUI</code> <code>macOS</code></p>
+      <p>
+        <img src="https://img.shields.io/badge/Swift-F05138?style=flat-square&logo=swift&logoColor=white" alt="Swift" />
+        <img src="https://img.shields.io/badge/SwiftUI-0071E3?style=flat-square&logo=swift&logoColor=white" alt="SwiftUI" />
+        <img src="https://img.shields.io/badge/macOS-111A21?style=flat-square&logo=apple&logoColor=white" alt="macOS" />
+      </p>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
       <h3>🐳&nbsp; <a href="https://github.com/AbyAbyss/dockman">dockman</a></h3>
       <p>A fast Docker management desktop app. Manage containers, images, volumes, networks and builds from one native window.</p>
-      <p><code>Tauri</code> <code>TypeScript</code> <code>Rust</code></p>
+      <p>
+        <img src="https://img.shields.io/badge/Tauri-24C8D8?style=flat-square&logo=tauri&logoColor=white" alt="Tauri" />
+        <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+        <img src="https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />
+      </p>
     </td>
     <td width="50%" valign="top">
       <h3>🧩&nbsp; <a href="https://github.com/AbyAbyss/sandkit">sandkit</a></h3>
       <p>An open-source SDK for embedding multi-language, runnable code playgrounds, powered by Piston, Pyodide and QuickJS.</p>
-      <p><code>TypeScript</code> <code>Hono</code> <code>Turborepo</code></p>
+      <p>
+        <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+        <img src="https://img.shields.io/badge/Hono-E36002?style=flat-square&logo=hono&logoColor=white" alt="Hono" />
+        <img src="https://img.shields.io/badge/Turborepo-EF4444?style=flat-square&logo=turborepo&logoColor=white" alt="Turborepo" />
+      </p>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
       <h3>🗄️&nbsp; <a href="https://github.com/AbyAbyss/redis_gui">redis_gui</a></h3>
       <p>A graphical Redis client. Browse the keyspace, run commands in a CLI and workbench, and watch live memory and metrics.</p>
-      <p><code>TypeScript</code> <code>Redis</code> <code>Webview</code></p>
+      <p>
+        <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+        <img src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white" alt="Redis" />
+        <img src="https://img.shields.io/badge/Webview-2ED3A7?style=flat-square&labelColor=111A21" alt="Webview" />
+      </p>
     </td>
     <td width="50%" valign="top">
       <h3>⚡&nbsp; <a href="https://abyabyss.github.io/term-rest-client.html">term-rest-client</a></h3>
       <p>An open-source API client for the terminal or the browser, run as <code>rest</code>. REST, GraphQL, streams, WebSockets and load testing, with collections, environments and tests, in one Go binary.</p>
-      <p><code>Go</code> <code>Terminal UI</code> <code>GraphQL</code> <code>Load testing</code></p>
-      <p><a href="https://github.com/AbyAbyss/cli-rest-client">Open source on GitHub</a></p>
+      <p>
+        <img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Go" />
+        <img src="https://img.shields.io/badge/Terminal%20UI-111A21?style=flat-square&logo=gnometerminal&logoColor=white" alt="Terminal UI" />
+        <img src="https://img.shields.io/badge/GraphQL-E10098?style=flat-square&logo=graphql&logoColor=white" alt="GraphQL" />
+        <img src="https://img.shields.io/badge/Load%20testing-2ED3A7?style=flat-square&labelColor=111A21" alt="Load testing" />
+      </p>
+      <p>
+        <a href="https://github.com/AbyAbyss/cli-rest-client"><img src="https://img.shields.io/badge/Open%20source-2ED3A7?style=flat-square&logo=github&labelColor=111A21" alt="Open source on GitHub" /></a>
+      </p>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
       <h3>⌨️&nbsp; <a href="https://github.com/AbyAbyss/InkTerm">InkTerm</a></h3>
       <p>A modern, themeable terminal with a built-in <b>AI agent</b> and <b>MCP</b> (Model Context Protocol) support. LLM-powered help, right in the command line.</p>
-      <p><code>TypeScript</code> <code>AI Agent</code> <code>MCP</code></p>
+      <p>
+        <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+        <img src="https://img.shields.io/badge/AI%20Agent-2ED3A7?style=flat-square&labelColor=111A21" alt="AI Agent" />
+        <img src="https://img.shields.io/badge/MCP-6E56CF?style=flat-square" alt="MCP" />
+      </p>
     </td>
-    <td width="50%" valign="top">
-      <h3>🚀&nbsp; <a href="https://abyabyss.github.io/">Explore in 3D</a></h3>
+    <td width="50%" valign="top"></td>
+  </tr>
+  <tr>
+    <td colspan="2" valign="top" align="center">
+      <h3>🚀&nbsp; Explore in 3D</h3>
       <p>See every project as an interactive 3D star system. Fly a ship between the planets and dock to open each one.</p>
-      <p><a href="https://abyabyss.github.io/">Launch abyabyss.github.io</a></p>
+      <p>
+        <a href="https://abyabyss.github.io/"><img src="https://img.shields.io/badge/Launch%20abyabyss.github.io-2ED3A7?style=flat-square&labelColor=111A21" alt="Launch portfolio" /></a>
+      </p>
     </td>
   </tr>
 </table>
 
-<img src="./assets/bleed/in-4.svg" width="100%" alt="" /><img src="./assets/zone-activity.svg" width="100%" alt="Activity (6,000 m, hadal zone)" /><img src="./assets/bleed/out-5.svg" width="100%" alt="" />
+---
+
+## 📊 GitHub Stats
 
 <div align="center">
 
-<img src="./assets/chips/pull-shark.svg" height="30" alt="Pull Shark ×4" /> <img src="./assets/chips/pair-extraordinaire.svg" height="30" alt="Pair Extraordinaire ×4" /> <img src="./assets/chips/quickdraw.svg" height="30" alt="Quickdraw" /> <img src="./assets/chips/yolo.svg" height="30" alt="YOLO" /> <img src="./assets/chips/arctic-code-vault.svg" height="30" alt="Arctic Code Vault Contributor" />
-
-<br /><br />
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.shion.dev/api?username=abyabyss&theme=dark&hide_border=false&include_all_commits=false&count_private=false" />
-  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.shion.dev/api?username=abyabyss&theme=default&hide_border=false&include_all_commits=false&count_private=false" />
-  <img height="170" alt="Aby's GitHub stats" src="https://github-readme-stats.shion.dev/api?username=abyabyss&theme=dark&hide_border=false&include_all_commits=false&count_private=false" />
-</picture>
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.shion.dev/api/top-langs/?username=abyabyss&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact" />
-  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.shion.dev/api/top-langs/?username=abyabyss&theme=default&hide_border=false&include_all_commits=false&count_private=false&layout=compact" />
-  <img height="170" alt="Top languages" src="https://github-readme-stats.shion.dev/api/top-langs/?username=abyabyss&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact" />
-</picture>
+<img height="170" alt="Aby's GitHub stats" src="https://github-readme-stats.shion.dev/api?username=abyabyss&theme=dark&hide_border=false&include_all_commits=false&count_private=false" />
+<img height="170" alt="Top languages" src="https://github-readme-stats.shion.dev/api/top-langs/?username=abyabyss&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact" />
 
 <br />
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com/?user=abyabyss&theme=dark&hide_border=false" />
-  <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com/?user=abyabyss&theme=default&hide_border=false" />
-  <img alt="GitHub streak" src="https://streak-stats.demolab.com/?user=abyabyss&theme=dark&hide_border=false" />
-</picture>
-
+<img alt="GitHub streak" src="https://streak-stats.demolab.com/?user=abyabyss&theme=dark&hide_border=false" />
 
 </div>
 
-<div align="center">
+---
 
-<img src="./assets/bleed/in-5.svg" width="100%" alt="" /><a href="https://abyabyss.github.io"><img src="./assets/seabed.svg" width="100%" alt="You've reached the bottom. The rest of the work is at abyabyss.github.io" /></a>
-
-<br /><br />
+## 🤝 Let's Connect
 
 I'm open to **Tech Lead and Architect roles in the UK**.
 
-<a href="https://abyabyss.github.io"><img src="./assets/buttons/portfolio.svg" height="52" alt="Portfolio: abyabyss.github.io" /></a>
-<a href="https://www.linkedin.com/in/aby-saji"><img src="./assets/buttons/linkedin.svg" height="52" alt="LinkedIn: aby-saji" /></a>
-<a href="mailto:abyrocksaji@gmail.com"><img src="./assets/buttons/email.svg" height="52" alt="Email: abyrocksaji@gmail.com" /></a>
+🌐 **Portfolio**: [abyabyss.github.io](https://abyabyss.github.io) &nbsp; | &nbsp;
+💼 **LinkedIn**: [aby-saji](https://www.linkedin.com/in/aby-saji) &nbsp; | &nbsp;
+✉️ **Email**: [abyrocksaji@gmail.com](mailto:abyrocksaji@gmail.com)
 
-<br /><br />
+<div align="center">
 
-<a href="https://github.com/AbyAbyss"><img src="https://komarev.com/ghpvc/?username=AbyAbyss&label=Profile%20views&color=2ED3A7&style=flat-square" alt="Profile views" /></a>
+<sub>⭐ From <a href="https://github.com/AbyAbyss">AbyAbyss</a>, building scalable, intelligent systems.</sub>
 
 </div>
