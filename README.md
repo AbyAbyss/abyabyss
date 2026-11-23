@@ -113,43 +113,27 @@ high-performance backend systems and AI-powered products.
       </p>
     </td>
     <td width="50%" valign="top">
+      <h3>🗂️&nbsp; <a href="https://abyabyss.github.io/stratum.html">Stratum</a></h3>
+      <p>A native macOS file manager and storage analyzer. Browse fast, see where the space went on a treemap, and clean up build caches and duplicates with an undo.</p>
+      <p>
+        <img src="https://img.shields.io/badge/Swift-F05138?style=flat-square&logo=swift&logoColor=white" alt="Swift" />
+        <img src="https://img.shields.io/badge/SwiftUI%20%2B%20AppKit-0071E3?style=flat-square&logo=swift&logoColor=white" alt="SwiftUI and AppKit" />
+        <img src="https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white" alt="SQLite" />
+        <img src="https://img.shields.io/badge/macOS-111A21?style=flat-square&logo=apple&logoColor=white" alt="macOS" />
+      </p>
+      <p>
+        <a href="https://github.com/AbyAbyss/stratum_file_manager"><img src="https://img.shields.io/badge/Open%20source-2ED3A7?style=flat-square&logo=github&labelColor=111A21" alt="Open source on GitHub" /></a>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
       <h3>📋&nbsp; <a href="https://github.com/AbyAbyss/Yankit">Yankit</a></h3>
       <p>A native macOS clipboard companion for yanking, stashing and recalling snippets. Fast and keyboard-driven.</p>
       <p>
         <img src="https://img.shields.io/badge/Swift-F05138?style=flat-square&logo=swift&logoColor=white" alt="Swift" />
         <img src="https://img.shields.io/badge/SwiftUI-0071E3?style=flat-square&logo=swift&logoColor=white" alt="SwiftUI" />
         <img src="https://img.shields.io/badge/macOS-111A21?style=flat-square&logo=apple&logoColor=white" alt="macOS" />
-      </p>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>🐳&nbsp; <a href="https://github.com/AbyAbyss/dockman">dockman</a></h3>
-      <p>A fast Docker management desktop app. Manage containers, images, volumes, networks and builds from one native window.</p>
-      <p>
-        <img src="https://img.shields.io/badge/Tauri-24C8D8?style=flat-square&logo=tauri&logoColor=white" alt="Tauri" />
-        <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
-        <img src="https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />
-      </p>
-    </td>
-    <td width="50%" valign="top">
-      <h3>🧩&nbsp; <a href="https://github.com/AbyAbyss/sandkit">sandkit</a></h3>
-      <p>An open-source SDK for embedding multi-language, runnable code playgrounds, powered by Piston, Pyodide and QuickJS.</p>
-      <p>
-        <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
-        <img src="https://img.shields.io/badge/Hono-E36002?style=flat-square&logo=hono&logoColor=white" alt="Hono" />
-        <img src="https://img.shields.io/badge/Turborepo-EF4444?style=flat-square&logo=turborepo&logoColor=white" alt="Turborepo" />
-      </p>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>🗄️&nbsp; <a href="https://github.com/AbyAbyss/redis_gui">redis_gui</a></h3>
-      <p>A graphical Redis client. Browse the keyspace, run commands in a CLI and workbench, and watch live memory and metrics.</p>
-      <p>
-        <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
-        <img src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white" alt="Redis" />
-        <img src="https://img.shields.io/badge/Webview-2ED3A7?style=flat-square&labelColor=111A21" alt="Webview" />
       </p>
     </td>
     <td width="50%" valign="top">
@@ -168,12 +152,60 @@ high-performance backend systems and AI-powered products.
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <h3>⌨️&nbsp; <a href="https://github.com/AbyAbyss/InkTerm">InkTerm</a></h3>
-      <p>A modern, themeable terminal with a built-in <b>AI agent</b> and <b>MCP</b> (Model Context Protocol) support. LLM-powered help, right in the command line.</p>
+      <h3>🎬&nbsp; <a href="https://abyabyss.github.io/animator/">ANIMATRON</a></h3>
+      <p>A browser-based SVG character animation studio. Rig characters, animate them on a multi-track timeline, sync lips to audio and export, with no install and no server.</p>
+      <p>
+        <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React" />
+        <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+        <img src="https://img.shields.io/badge/SVG-FFB13B?style=flat-square&logo=svg&logoColor=black" alt="SVG" />
+        <img src="https://img.shields.io/badge/Web%20Audio-2ED3A7?style=flat-square&labelColor=111A21" alt="Web Audio" />
+      </p>
+      <p>
+        <img src="https://img.shields.io/badge/Source%20private-111A21?style=flat-square&logo=github" alt="Source currently private" />
+      </p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>🎞️&nbsp; ReelForge</h3>
+      <p>A local-first AI video generator. A topic, story or script becomes a scene plan, visuals, narration, word-timed captions and a finished vertical MP4.</p>
+      <p>
+        <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
+        <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI" />
+        <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white" alt="Next.js" />
+        <img src="https://img.shields.io/badge/FFmpeg-007808?style=flat-square&logo=ffmpeg&logoColor=white" alt="FFmpeg" />
+      </p>
+      <p>
+        <img src="https://img.shields.io/badge/Source%20private-111A21?style=flat-square&logo=github" alt="Source currently private" />
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🧩&nbsp; <a href="https://github.com/AbyAbyss/sandkit">sandkit</a></h3>
+      <p>An open-source SDK for embedding multi-language, runnable code playgrounds, powered by Piston, Pyodide and QuickJS.</p>
       <p>
         <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
-        <img src="https://img.shields.io/badge/AI%20Agent-2ED3A7?style=flat-square&labelColor=111A21" alt="AI Agent" />
-        <img src="https://img.shields.io/badge/MCP-6E56CF?style=flat-square" alt="MCP" />
+        <img src="https://img.shields.io/badge/Hono-E36002?style=flat-square&logo=hono&logoColor=white" alt="Hono" />
+        <img src="https://img.shields.io/badge/Turborepo-EF4444?style=flat-square&logo=turborepo&logoColor=white" alt="Turborepo" />
+      </p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>🐳&nbsp; <a href="https://github.com/AbyAbyss/dockman">dockman</a></h3>
+      <p>A fast Docker management desktop app. Manage containers, images, volumes, networks and builds from one native window.</p>
+      <p>
+        <img src="https://img.shields.io/badge/Tauri-24C8D8?style=flat-square&logo=tauri&logoColor=white" alt="Tauri" />
+        <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+        <img src="https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🗄️&nbsp; <a href="https://github.com/AbyAbyss/redis_gui">redis_gui</a></h3>
+      <p>A graphical Redis client. Browse the keyspace, run commands in a CLI and workbench, and watch live memory and metrics.</p>
+      <p>
+        <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+        <img src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white" alt="Redis" />
+        <img src="https://img.shields.io/badge/Webview-2ED3A7?style=flat-square&labelColor=111A21" alt="Webview" />
       </p>
     </td>
     <td width="50%" valign="top"></td>
